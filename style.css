@@ -26,6 +26,24 @@ body {
   color: #e8eef5;
 }
 
+/* Scroll animations (AOS-like) */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: transform var(--aos-duration, 600ms) ease,
+    opacity var(--aos-duration, 600ms) ease;
+  will-change: opacity, transform;
+}
+[data-aos].aos-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transition: none !important;
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100dvh;
