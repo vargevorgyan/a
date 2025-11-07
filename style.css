@@ -2393,6 +2393,9 @@ body.menu-open {
   .services__item a {
     font-size: 14px;
   }
+  .contact__nda {
+    padding-right: 10px;
+  }
 }
 
 @media screen and (max-width: 550px) {
