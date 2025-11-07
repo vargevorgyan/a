@@ -49,6 +49,7 @@ body {
   min-height: 100dvh;
   overflow: hidden;
   background: #0f1a24;
+  padding-top: var(--header-h, 96px);
 }
 
 .hero__bg {
@@ -66,14 +67,50 @@ body {
   margin: 0 auto;
 }
 
+/* Offset anchor scroll for fixed header */
+[id] {
+  scroll-margin-top: var(--header-h, 96px);
+}
+
 /* Header */
 .header {
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 24px 0 0;
+  background: transparent;
+  transition: background 200ms ease, box-shadow 200ms ease,
+    -webkit-backdrop-filter 200ms ease, backdrop-filter 200ms ease;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; /* full-bleed background */
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  transition: background 200ms ease, box-shadow 200ms ease,
+    -webkit-backdrop-filter 200ms ease, backdrop-filter 200ms ease;
+  z-index: -1;
+}
+
+.header--scrolled {
+  background: transparent; /* use pseudo for full width */
+  padding-bottom: 24px; /* nicer bottom spacing when stuck */
+}
+.header--scrolled::before {
+  background: rgba(15, 25, 38, 0.55);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  backdrop-filter: saturate(160%) blur(10px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
 
 .header__left {

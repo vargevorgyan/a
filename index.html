@@ -1410,7 +1410,14 @@
         ?.addEventListener('click', function () {
           document.querySelector('.cookie')?.classList.add('cookie--hidden')
         })
-
+      document.body.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        if (!header) return
+        header.classList.toggle(
+          'header--scrolled',
+          document.body.scrollTop > 10
+        )
+      })
       // Offcanvas menu logic (burger)
       ;(function () {
         const burger = document.querySelector('.burger')
