@@ -7,7 +7,10 @@
     <title>IQT Group — Налоговый консалтинг</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body class="is-preloading">
+    <div class="preloader preloader--visible" aria-hidden="true">
+      <img class="preloader__logo" src="./icon.svg" alt="" />
+    </div>
     <div class="hero">
       <div class="hero__bg" aria-hidden="true"></div>
       <header class="header">
@@ -1777,6 +1780,30 @@
             // No explicit refresh needed; IntersectionObserver accounts for it
           })
         })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        var preloader = document.querySelector('.preloader')
+        if (!preloader) return
+
+        function hidePreloader() {
+          if (!preloader || preloader.classList.contains('preloader--hidden'))
+            return
+          preloader.classList.remove('preloader--visible')
+          var onEnd = function (e) {
+            if (e.propertyName !== 'opacity') return
+            preloader.classList.add('preloader--hidden')
+            preloader.removeEventListener('transitionend', onEnd)
+            document.body.classList.remove('is-preloading')
+          }
+          preloader.addEventListener('transitionend', onEnd)
+        }
+
+        // Fade out when the page finishes loading
+        window.addEventListener('load', hidePreloader)
+        // Fallback in case load is delayed
+        setTimeout(hidePreloader, 3500)
       })()
     </script>
   </body>

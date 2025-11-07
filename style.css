@@ -2475,3 +2475,59 @@ body.menu-open {
     height: 56px;
   }
 }
+
+/* Full-screen preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f1a24; /* match hero bg */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 360ms ease;
+}
+.preloader--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.preloader--hidden {
+  display: none;
+}
+.preloader__logo {
+  width: clamp(200px, 36vw, 480px);
+  height: auto;
+  transform-origin: center;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35));
+  animation: preloaderPulse 1200ms ease-in-out infinite alternate;
+}
+@keyframes preloaderPulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.96);
+    opacity: 0.85;
+  }
+}
+/* no appear animation — only fade out on hide */
+@media (prefers-reduced-motion: reduce) {
+  .preloader {
+    transition: none;
+  }
+  .preloader__logo {
+    animation: none;
+  }
+}
+
+/* Disable scroll while preloader is visible */
+body.is-preloading {
+  overflow: hidden;
+}
