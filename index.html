@@ -11,6 +11,84 @@
     <div class="preloader preloader--visible" aria-hidden="true">
       <img class="preloader__logo" src="./icon.svg" alt="" />
     </div>
+    <!-- Callback modal -->
+    <div class="modal" id="callback-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Обратный звонок"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+        <h2 class="modal__title">
+          Укажите контактные данные и удобное время для звонка
+        </h2>
+        <p class="modal__subtitle">
+          Мы перезвоним вам в течение 1 часа или в другое удобное время
+        </p>
+        <form class="callback-form" action="#" method="post" novalidate>
+          <input
+            class="callback-input"
+            type="text"
+            name="name"
+            placeholder="Ваше имя"
+            autocomplete="name"
+          />
+          <input
+            class="callback-input"
+            type="tel"
+            name="phone"
+            placeholder="+7 (999) 555-55-55"
+            autocomplete="tel"
+          />
+          <div class="callback-time">
+            <p class="callback-time__label">КОГДА ВАМ ПОЗВОНИТЬ?</p>
+            <div class="callback-time__controls">
+              <button type="button" class="callback-time__btn" data-type="now">
+                ПОЗВОНИТЬ СЕЙЧАС
+              </button>
+              <button
+                type="button"
+                class="callback-time__btn is-active"
+                data-type="later"
+              >
+                ПОЗВОНИТЬ ПО ВРЕМЕНИ
+              </button>
+            </div>
+          </div>
+          <input
+            class="callback-input"
+            type="text"
+            name="datetime"
+            style="text-align: left; padding-left: 24px"
+            placeholder="Например: 21 октября в 14:00"
+            data-datetime
+          />
+          <button class="cta-main callback-submit" type="submit">
+            Перезвонить мне
+          </button>
+          <ul class="contact__agreements" data-aos="fade-up">
+            <li class="contact__agreement">
+              <span class="checkbox" aria-hidden="true"></span>
+              <span>
+                Я даю согласие на обработку персональных данных в соответствии с
+                Политикой конфиденциальности
+              </span>
+            </li>
+            <li class="contact__agreement">
+              <span class="checkbox" aria-hidden="true"></span>
+              <span>
+                Я согласен на получение информационных и маркетинговых рассылок
+                (вы в любой момент можете отказаться от получения писем)
+              </span>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
     <div class="hero">
       <div class="hero__bg" aria-hidden="true"></div>
       <header class="header">
@@ -54,10 +132,15 @@
           За счет методов, недоступных<br />
           большинству налоговых консультантов
         </p>
-        <a style="max-width: 578px; width: 100%" class="cta-main" href="#">
+        <button
+          id="callback-open"
+          style="max-width: 578px; width: 100%"
+          class="cta-main"
+          href="#"
+        >
           <span> Бесплатная консультация </span>
           <span> Записаться на бесплатную консультацию </span>
-        </a>
+        </button>
       </main>
 
       <div class="cookie" data-aos="fade-up">
@@ -492,7 +575,7 @@
       <div class="services__container">
         <h2 class="services__title" data-aos="fade-up">Наши услуги</h2>
 
-        <div class="services__group">
+        <div class="services__group" style="display: none">
           <h3 class="services__subtitle">Сопровождение</h3>
           <ul class="services__list">
             <li class="services__item" data-aos="fade-up">
@@ -1218,7 +1301,7 @@
           </div>
         </div>
         <div class="site-footer__info" data-aos="fade-up">
-          <span>
+          <span style="display: none">
             ИП Иванов Иван Иванович ИНН: 100000000000 ОГРНИП: 3000000000000
           </span>
           <a class="site-footer__email" href="mailto:info@iqt-group.ru"
@@ -1228,7 +1311,7 @@
 
         <div class="site-footer__services">
           <div class="services__container" style="margin: 0">
-            <div class="services__group">
+            <div class="services__group" style="display: none">
               <h3 class="services__subtitle" data-aos="fade-up">
                 Сопровождение
               </h3>
@@ -1804,6 +1887,67 @@
         window.addEventListener('load', hidePreloader)
         // Fallback in case load is delayed
         setTimeout(hidePreloader, 3500)
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const trigger = document.getElementById('callback-open')
+        const modal = document.getElementById('callback-modal')
+        if (!trigger || !modal) return
+        const overlay = modal.querySelector('.modal__overlay')
+        const closeBtn = modal.querySelector('.modal__close')
+        const btnNow = modal.querySelector('[data-type="now"]')
+        const btnLater = modal.querySelector('[data-type="later"]')
+        const datetimeInput = modal.querySelector('[data-datetime]')
+
+        function openModal() {
+          modal.classList.add('modal--visible')
+          // reflow then animate
+          void modal.offsetWidth
+          requestAnimationFrame(function () {
+            modal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+        function closeModal() {
+          modal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+        modal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !modal.classList.contains('modal--open')
+          ) {
+            modal.classList.remove('modal--visible')
+          }
+        })
+
+        function setMode(mode) {
+          const isLater = mode === 'later'
+          if (datetimeInput) {
+            datetimeInput.style.display = isLater ? '' : 'none'
+            datetimeInput.disabled = !isLater
+          }
+          btnNow?.classList.toggle('is-active', !isLater)
+          btnLater?.classList.toggle('is-active', isLater)
+        }
+        setMode('later')
+
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault()
+          openModal()
+        })
+        overlay?.addEventListener('click', closeModal)
+        closeBtn?.addEventListener('click', closeModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeModal()
+        })
+        btnNow?.addEventListener('click', function () {
+          setMode('now')
+        })
+        btnLater?.addEventListener('click', function () {
+          setMode('later')
+        })
       })()
     </script>
   </body>
