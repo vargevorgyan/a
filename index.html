@@ -114,7 +114,7 @@
           <a class="icon-btn" href="#" aria-label="Написать в мессенджер">
             <img src="./messenger.svg" alt="WhatsApp" />
           </a>
-          <a class="cta-small" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+          <button class="cta-small" data-callback-open>ЗАКАЗАТЬ ЗВОНОК</button>
           <a class="phone" href="tel:+74997119988">+7 499 711 99 88</a>
           <button class="icon-btn" aria-label="Закрыть">
             <img src="./close.svg" alt="Закрыть" />
@@ -134,6 +134,7 @@
         </p>
         <button
           id="callback-open"
+          data-callback-open
           style="max-width: 578px; width: 100%"
           class="cta-main"
           href="#"
@@ -268,9 +269,14 @@
           <p class="cta-bg__muted" data-aos="fade-up">
             Давайте разберем вашу ситуацию и поможем выстроить стратегию защиты
           </p>
-          <a class="cta-main cta-bg__btn" data-aos="fade-up" href="#"
-            >Разобрать ситуацию</a
+          <button
+            class="cta-main cta-bg__btn"
+            data-aos="fade-up"
+            type="button"
+            data-callback-open
           >
+            Разобрать ситуацию
+          </button>
         </div>
       </div>
     </section>
@@ -1281,13 +1287,13 @@
             >
               <img src="./whatsapp-black.svg" alt="WhatsApp" />
             </a>
-            <a
+            <button
               class="cta-small"
-              href="#"
+              data-callback-open
               style="background: #b8dcf4; color: #0b1926; font-weight: 800"
             >
               ЗАКАЗАТЬ ЗВОНОК
-            </a>
+            </button>
             <a class="phone" href="tel:+74997119988" style="color: #0b1926">
               +7 499 711 99 88
             </a>
@@ -1891,9 +1897,11 @@
     </script>
     <script>
       ;(function () {
-        const trigger = document.getElementById('callback-open')
+        const triggers = Array.from(
+          document.querySelectorAll('[data-callback-open]')
+        )
         const modal = document.getElementById('callback-modal')
-        if (!trigger || !modal) return
+        if (!triggers.length || !modal) return
         const overlay = modal.querySelector('.modal__overlay')
         const closeBtn = modal.querySelector('.modal__close')
         const btnNow = modal.querySelector('[data-type="now"]')
@@ -1933,9 +1941,11 @@
         }
         setMode('later')
 
-        trigger.addEventListener('click', function (e) {
-          e.preventDefault()
-          openModal()
+        triggers.forEach(function (el) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault()
+            openModal()
+          })
         })
         overlay?.addEventListener('click', closeModal)
         closeBtn?.addEventListener('click', closeModal)

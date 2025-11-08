@@ -189,6 +189,7 @@ body {
   padding: 0 16px;
   display: flex;
   align-items: center;
+  font-weight: 800;
   justify-content: center;
   height: 48px;
   border-radius: 10px;
@@ -1866,7 +1867,7 @@ button {
 }
 .modal__title {
   font-family: 'Roboto Flex', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 44px;
   line-height: 115%;
   color: #ffffffcc;
