@@ -653,6 +653,18 @@ body {
   text-decoration: none;
   font-family: 'Roboto Flex', sans-serif;
   font-weight: 700;
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+.contact__chip:hover {
+  background: #b8dcf433;
+  border-width: 2px;
+  border-color: #b8dcf4;
+}
+.contact__chip.is-active {
+  background: #b8dcf433;
+  border-width: 2px;
+  border-color: #b8dcf4;
 }
 .contact__chip img {
   width: 18px;

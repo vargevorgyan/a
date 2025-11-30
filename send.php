@@ -62,6 +62,17 @@ if (!empty($clean['phone'])) {
   $lines[] = 'Тел. номер: ' . $clean['tel'];
 }
 
+// Add preferred contact method
+if (!empty($clean['contact_method'])) {
+  $methodMap = [
+    'phone' => 'Телефон',
+    'telegram' => 'Telegram',
+    'whatsapp' => 'WhatsApp'
+  ];
+  $methodLabel = $methodMap[$clean['contact_method']] ?? $clean['contact_method'];
+  $lines[] = 'Предпочтительный способ связи: ' . $methodLabel;
+}
+
 // Add datetime if present (from callback form)
 if (!empty($clean['datetime'])) {
   $lines[] = 'Желаемое время звонка: ' . $clean['datetime'];

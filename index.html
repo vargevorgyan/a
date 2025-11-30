@@ -100,7 +100,7 @@
           <div class="contact__container">
             <div class="contact__left">
               <h2 class="contact__title">
-                Получите бесплатную консультацию от эксперта IQT
+                Получите бесплатную консультацию от эксперта IQT
               </h2>
               <p class="contact__subtitle">
                 Выберите удобный формат встречи: дистанционно или встретиться
@@ -112,16 +112,22 @@
               </div>
             </div>
             <div class="contact__right">
-              <form class="contact__form" action="#" method="post">
+              <form class="contact__form" action="./send.php" method="post">
+                <input type="hidden" name="service_name" value="" />
+                <input type="hidden" name="contact_method" value="phone" />
                 <input
                   class="contact__input"
                   type="text"
+                  name="name"
                   placeholder="Ваше имя"
+                  required
                 />
                 <input
                   class="contact__input"
                   type="tel"
+                  name="phone"
                   placeholder="+7 (999) 555-55-55"
+                  required
                 />
                 <button class="cta-main contact__submit" type="submit">
                   Получить бесплатную консультацию
@@ -131,18 +137,18 @@
               <div class="contact__methods">
                 <div class="contact__methods-title">СПОСОБ СВЯЗИ</div>
                 <div class="contact__chips">
-                  <a class="contact__chip" href="#">
+                  <button type="button" class="contact__chip is-active" data-method="phone">
                     <img src="./call.svg" alt="Звонок" />
                     <span>ЗВОНОК</span>
-                  </a>
-                  <a class="contact__chip" href="#">
+                  </button>
+                  <button type="button" class="contact__chip" data-method="telegram">
                     <img src="./plane.svg" alt="Telegram" />
                     <span>TELEGRAM</span>
-                  </a>
-                  <a class="contact__chip" href="#">
+                  </button>
+                  <button type="button" class="contact__chip" data-method="whatsapp">
                     <img src="./messenger.svg" alt="WhatsApp" />
                     <span>WHATSAP</span>
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -297,7 +303,7 @@
                 Проверка уже назначена или только ожидается?
               </p>
               <h2 class="contact__title">
-                Поможем оценить риски и выстроить правильную линию защиты
+                Поможем оценить риски и выстроить правильную линию защиты
               </h2>
               <p class="contact__subtitle">
                 Выберите удобный формат встречи: дистанционно или встретиться
@@ -309,16 +315,22 @@
               </div>
             </div>
             <div class="contact__right">
-              <form class="contact__form" action="#" method="post">
+              <form class="contact__form" action="./send.php" method="post">
+                <input type="hidden" name="service_name" value="" />
+                <input type="hidden" name="contact_method" value="phone" />
                 <input
                   class="contact__input"
                   type="text"
+                  name="name"
                   placeholder="Ваше имя"
+                  required
                 />
                 <input
                   class="contact__input"
                   type="tel"
+                  name="phone"
                   placeholder="+7 (999) 555-55-55"
+                  required
                 />
                 <button class="cta-main contact__submit" type="submit">
                   Получить бесплатную консультацию
@@ -328,18 +340,18 @@
               <div class="contact__methods">
                 <div class="contact__methods-title">СПОСОБ СВЯЗИ</div>
                 <div class="contact__chips">
-                  <a class="contact__chip" href="#">
+                  <button type="button" class="contact__chip is-active" data-method="phone">
                     <img src="./call.svg" alt="Звонок" />
                     <span>ЗВОНОК</span>
-                  </a>
-                  <a class="contact__chip" href="#">
+                  </button>
+                  <button type="button" class="contact__chip" data-method="telegram">
                     <img src="./plane.svg" alt="Telegram" />
                     <span>TELEGRAM</span>
-                  </a>
-                  <a class="contact__chip" href="#">
+                  </button>
+                  <button type="button" class="contact__chip" data-method="whatsapp">
                     <img src="./messenger.svg" alt="WhatsApp" />
                     <span>WHATSAP</span>
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -622,18 +634,24 @@
           </div>
         </div>
         <div class="contact__right">
-          <form class="contact__form" action="#" method="post">
+          <form class="contact__form" action="./send.php" method="post">
+            <input type="hidden" name="service_name" value="Главная страница" />
+            <input type="hidden" name="contact_method" value="phone" />
             <input
               class="contact__input"
               data-aos="fade-up"
               type="text"
+              name="name"
               placeholder="Ваше имя"
+              required
             />
             <input
               class="contact__input"
               data-aos="fade-up"
               type="tel"
+              name="phone"
               placeholder="+7 (999) 555-55-55"
+              required
             />
             <button
               class="cta-main contact__submit"
@@ -649,18 +667,18 @@
               СПОСОБ СВЯЗИ
             </div>
             <div class="contact__chips">
-              <a class="contact__chip" data-aos="fade-up" href="#">
+              <button type="button" class="contact__chip is-active" data-aos="fade-up" data-method="phone">
                 <img src="./call.svg" alt="Звонок" />
                 <span>ЗВОНОК</span>
-              </a>
-              <a class="contact__chip" data-aos="fade-up" href="#">
+              </button>
+              <button type="button" class="contact__chip" data-aos="fade-up" data-method="telegram">
                 <img src="./plane.svg" alt="Telegram" />
                 <span>TELEGRAM</span>
-              </a>
-              <a class="contact__chip" data-aos="fade-up" href="#">
+              </button>
+              <button type="button" class="contact__chip" data-aos="fade-up" data-method="whatsapp">
                 <img src="./messenger.svg" alt="WhatsApp" />
                 <span>WHATSAP</span>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -1047,7 +1065,7 @@
       <div class="contact__container">
         <div class="contact__left">
           <h2 class="contact__title" data-aos="fade-up">
-            Мы поможем в решении и других вопросов с налоговой инспекцией
+            Мы поможем в решении и других вопросов с налоговой инспекцией
           </h2>
           <p class="contact__subtitle" data-aos="fade-up">
             Запишитесь на бесплатную консультацию по вашей ситуации с одним из
@@ -1063,18 +1081,24 @@
           </div>
         </div>
         <div class="contact__right">
-          <form class="contact__form" action="#" method="post">
+          <form class="contact__form" action="./send.php" method="post">
+            <input type="hidden" name="service_name" value="Главная страница" />
+            <input type="hidden" name="contact_method" value="phone" />
             <input
               class="contact__input"
               data-aos="fade-up"
               type="text"
+              name="name"
               placeholder="Ваше имя"
+              required
             />
             <input
               class="contact__input"
               data-aos="fade-up"
               type="tel"
+              name="phone"
               placeholder="+7 (999) 555-55-55"
+              required
             />
             <button
               class="cta-main contact__submit"
@@ -1090,18 +1114,18 @@
               СПОСОБ СВЯЗИ
             </div>
             <div class="contact__chips">
-              <a class="contact__chip" data-aos="fade-up" href="#">
+              <button type="button" class="contact__chip is-active" data-aos="fade-up" data-method="phone">
                 <img src="./call.svg" alt="Звонок" />
                 <span>ЗВОНОК</span>
-              </a>
-              <a class="contact__chip" data-aos="fade-up" href="#">
+              </button>
+              <button type="button" class="contact__chip" data-aos="fade-up" data-method="telegram">
                 <img src="./plane.svg" alt="Telegram" />
                 <span>TELEGRAM</span>
-              </a>
-              <a class="contact__chip" data-aos="fade-up" href="#">
+              </button>
+              <button type="button" class="contact__chip" data-aos="fade-up" data-method="whatsapp">
                 <img src="./messenger.svg" alt="WhatsApp" />
                 <span>WHATSAP</span>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -2143,6 +2167,35 @@
           mq.addListener(applyPlaceholders)
         }
         applyPlaceholders()
+      })()
+    </script>
+    <script>
+      // Contact method selection
+      ;(function () {
+        const forms = document.querySelectorAll('.contact__form')
+        if (!forms.length) return
+
+        forms.forEach(function (form) {
+          const chips = form.parentElement.querySelectorAll('.contact__chip')
+          const methodInput = form.querySelector('input[name="contact_method"]')
+          if (!chips.length || !methodInput) return
+
+          chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+              const method = chip.getAttribute('data-method')
+              if (!method) return
+
+              // Update active state
+              chips.forEach(function (c) {
+                c.classList.remove('is-active')
+              })
+              chip.classList.add('is-active')
+
+              // Update hidden input
+              methodInput.value = method
+            })
+          })
+        })
       })()
     </script>
     <script>
