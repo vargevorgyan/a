@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>IQT Group — Налоговый консалтинг</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="is-preloading">
+    <div class="preloader preloader--visible" aria-hidden="true">
+      <img class="preloader__logo" src="./icon.svg" alt="" />
+    </div>
+    <!-- Cases modal -->
+    <div class="modal modal2" id="cases-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Снизили размеры налоговых требований ФНС на 70% для строительной компании и помогли ей сэкономить сотни миллионов рублей"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+
+        <p class="service-modal__lead">
+          Снизили размеры налоговых требований ФНС на 70% для строительной
+          компании и помогли ей сэкономить сотни миллионов рублей
+        </p>
+        <div class="service-modal__wrapper">
+          <div class="service-modal__item">
+            <p>Ситуация</p>
+            <p>
+              К нам обратилась строительная компания, оказавшаяся под
+              пристальным вниманием налоговой из-за сделок с семью
+              контрагентами. Инспекция направляла многочисленные требования,
+              вызывала руководство на комиссии и допрашивала сотрудников.
+              Попытки самостоятельно отвечать на запросы лишь ухудшали
+              положение: налоговая накапливала всё более серьезную доказательную
+              базу.
+            </p>
+          </div>
+
+          <div class="service-modal__item">
+            <p>
+              Почему ситуация <br />
+              осложнилась
+            </p>
+            <p>
+              Компания обратилась за помощью на позднем этапе, когда часть
+              протоколов и объяснений уже была представлена. Некоторые ответы
+              директора под протокол фактически усилили аргументы инспекции, а
+              не ослабили их.
+            </p>
+          </div>
+        </div>
+        <div class="service-modal__item">
+          <p>наши шаги</p>
+          <ul class="service-modal__list">
+            <li>Мы проанализировали материалы проверки и выделили риски.</li>
+            <li>
+              По двум контрагентам нашли подтверждения реальности сделок и
+              подготовили обоснованную позицию и пакет документов для комиссии,
+              что позволило сохранить налоговые вычеты.
+            </li>
+            <li>
+              По пяти остальным, учитывая слабую доказательную базу и прежние
+              ошибки, рекомендовали подать уточненные декларации, чтобы снизить
+              риск доначислений и избежать выездной проверки.
+            </li>
+          </ul>
+        </div>
+        <div class="result">
+          <p>Результат</p>
+          <ul class="service-modal__list_result">
+            <li>Снизили размеры налоговых требований ФНС на 70%</li>
+            <li>Помогли сэкономить 100 млн рублей</li>
+            <li>
+              Компания избежала эскалации конфликта в формат выездной проверки
+            </li>
+          </ul>
+        </div>
+        <div class="service-modal__item">
+          <p>Вывод для бизнеса</p>
+          <p>
+            Опыт показал: чем раньше компания привлекает налоговых
+            консультантов, тем больше шансов сохранить позиции. Самостоятельная
+            переписка с инспекцией часто только усугубляет ситуацию — налоговая
+            собирает дополнительные доказательства, которые потом крайне сложно
+            оспорить.
+            <br />
+            <br />
+            Для компаний в строительной сфере, где налоговые риски традиционно
+            высоки, своевременная профессиональная защита — это не расходы, а
+            стратегическая инвестиция в безопасность бизнеса.
+          </p>
+        </div>
+        <section class="contact" aria-label="Бесплатная консультация">
+          <div class="contact__container">
+            <div class="contact__left">
+              <h2 class="contact__title">
+                Получите бесплатную консультацию от эксперта IQT
+              </h2>
+              <p class="contact__subtitle">
+                Выберите удобный формат встречи: дистанционно или встретиться
+                вживую в Москве в удобном для вас месте
+              </p>
+              <div class="contact__nda">
+                <img src="./lock.png" alt="NDA" />
+                <span>Перед консультацией подписываем NDA о неразглашении</span>
+              </div>
+            </div>
+            <div class="contact__right">
+              <form class="contact__form" action="./send.php" method="post">
+                <input type="hidden" name="service_name" value="" />
+                <input type="hidden" name="contact_method" value="phone" />
+                <input
+                  class="contact__input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input
+                  class="contact__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (999) 555-55-55"
+                  required
+                />
+                <button class="cta-main contact__submit" type="submit">
+                  Получить бесплатную консультацию
+                </button>
+              </form>
+
+              <div class="contact__methods">
+                <div class="contact__methods-title">СПОСОБ СВЯЗИ</div>
+                <div class="contact__chips">
+                  <button
+                    type="button"
+                    class="contact__chip is-active"
+                    data-method="phone"
+                  >
+                    <img src="./call.svg" alt="Звонок" />
+                    <span>ЗВОНОК</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="telegram"
+                  >
+                    <img src="./plane.svg" alt="Telegram" />
+                    <span>TELEGRAM</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="whatsapp"
+                  >
+                    <img src="./messenger.svg" alt="WhatsApp" />
+                    <span>WHATSAP</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact__divider" aria-hidden="true"></div>
+
+              <div class="contact__brand">
+                <img class="contact__logo" src="./icon.svg" alt="IQT GROUP" />
+                <span class="contact__rights">Все права защищены</span>
+              </div>
+
+              <ul class="contact__agreements">
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я даю согласие на обработку персональных данных в
+                    соответствии с Политикой конфиденциальности
+                  </span>
+                </li>
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я согласен на получение информационных и маркетинговых
+                    рассылок (вы в любой момент можете отказаться от получения
+                    писем)
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <p class="connect__subtitle">
+          Или сразу свяжитесь с нами в любом мессенджере
+        </p>
+
+        <div class="connect__options">
+          <a class="connect__option" href="#">
+            <img
+              class="connect__icon"
+              src="./whatsappsilver.png"
+              alt="WhatsApp"
+            />
+            <span>Написать WhatsApp</span>
+          </a>
+          <a class="connect__option" href="#">
+            <img
+              class="connect__icon"
+              src="./telegramsilver.png"
+              alt="Telegram"
+            />
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Callback modal -->
+    <div class="modal" id="callback-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Обратный звонок"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+        <h2 class="modal__title">
+          Укажите контактные данные и удобное время для звонка
+        </h2>
+        <p class="modal__subtitle">
+          Мы перезвоним вам в течение 1 часа или в другое удобное время
+        </p>
+        <form
+          class="callback-form"
+          action="./send.php"
+          method="post"
+          novalidate
+        >
+          <input type="hidden" name="service_name" value="Обратный звонок" />
+          <input
+            class="callback-input"
+            type="text"
+            name="name"
+            placeholder="Ваше имя"
+            autocomplete="name"
+          />
+          <input
+            class="callback-input"
+            type="tel"
+            name="phone"
+            placeholder="+7 (999) 555-55-55"
+            autocomplete="tel"
+          />
+          <div class="callback-time">
+            <p class="callback-time__label">КОГДА ВАМ ПОЗВОНИТЬ?</p>
+            <div class="callback-time__controls">
+              <button type="button" class="callback-time__btn" data-type="now">
+                ПОЗВОНИТЬ СЕЙЧАС
+              </button>
+              <button
+                type="button"
+                class="callback-time__btn is-active"
+                data-type="later"
+              >
+                ПОЗВОНИТЬ ПО ВРЕМЕНИ
+              </button>
+            </div>
+          </div>
+          <input
+            class="callback-input"
+            type="text"
+            name="datetime"
+            style="text-align: left; padding-left: 24px"
+            placeholder="Например: 21 октября в 14:00"
+            data-datetime
+          />
+          <button class="cta-main callback-submit" type="submit">
+            Перезвонить мне
+          </button>
+          <ul class="contact__agreements" data-aos="fade-up">
+            <li class="contact__agreement">
+              <span class="checkbox" aria-hidden="true"></span>
+              <span>
+                Я даю согласие на обработку персональных данных в соответствии с
+                Политикой конфиденциальности
+              </span>
+            </li>
+            <li class="contact__agreement">
+              <span class="checkbox" aria-hidden="true"></span>
+              <span>
+                Я согласен на получение информационных и маркетинговых рассылок
+                (вы в любой момент можете отказаться от получения писем)
+              </span>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <!-- Services modal -->
+    <div class="modal modal2" id="service-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Комплексное сопровождение налоговых проверок"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+
+        <p class="service-modal__lead">
+          Комплексное сопровождение налоговых проверок
+        </p>
+        <div class="service-modal__item">
+          <p>Камеральные проверки</p>
+          <p>
+            Анализируем декларации глазами налоговой и выявляем «красные флаги»
+            еще до инспекции. Готовим корректные ответы, формируем пакет
+            документов и ведем переписку с ФНС. Такой подход помогает закрыть
+            камеральную проверку без доначислений и снизить риск перехода в
+            выездную.
+          </p>
+        </div>
+        <div class="service-modal__item">
+          <p>Выездные проверки</p>
+          <p>
+            Готовим компанию заранее: проверяем документы, прогнозируем вопросы
+            и уязвимые зоны. На самой проверке сопровождаем каждое действие
+            инспекторов, контролируем законность требований и корректность
+            протоколов. В результате клиент получает защиту от незаконных
+            запросов и снижение рисков доначислений.
+          </p>
+        </div>
+        <div class="service-modal__item">
+          <p>Тематические проверки</p>
+          <p>
+            Готовим компанию к узконаправленным проверкам ФНС, которые касаются
+            отдельных налогов или конкретных вопросов. Анализируем документы,
+            выявляем возможные риски и проверяем корректность расчетов.
+            Формируем обоснованную позицию, готовим пояснения и ведем переписку
+            с налоговой. Такой подход позволяет пройти проверку быстро и без
+            доначислений, сохранив устойчивость и репутацию бизнеса.
+          </p>
+        </div>
+        <section class="contact" aria-label="Бесплатная консультация">
+          <div class="contact__container">
+            <div class="contact__left">
+              <p class="contact__subtitle">
+                Проверка уже назначена или только ожидается?
+              </p>
+              <h2 class="contact__title">
+                Поможем оценить риски и выстроить правильную линию защиты
+              </h2>
+              <p class="contact__subtitle">
+                Выберите удобный формат встречи: дистанционно или встретиться
+                вживую в Москве в удобном для вас месте
+              </p>
+              <div class="contact__nda">
+                <img src="./lock.png" alt="NDA" />
+                <span>Перед консультацией подписываем NDA о неразглашении</span>
+              </div>
+            </div>
+            <div class="contact__right">
+              <form class="contact__form" action="./send.php" method="post">
+                <input type="hidden" name="service_name" value="" />
+                <input type="hidden" name="contact_method" value="phone" />
+                <input
+                  class="contact__input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input
+                  class="contact__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (999) 555-55-55"
+                  required
+                />
+                <button class="cta-main contact__submit" type="submit">
+                  Получить бесплатную консультацию
+                </button>
+              </form>
+
+              <div class="contact__methods">
+                <div class="contact__methods-title">СПОСОБ СВЯЗИ</div>
+                <div class="contact__chips">
+                  <button
+                    type="button"
+                    class="contact__chip is-active"
+                    data-method="phone"
+                  >
+                    <img src="./call.svg" alt="Звонок" />
+                    <span>ЗВОНОК</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="telegram"
+                  >
+                    <img src="./plane.svg" alt="Telegram" />
+                    <span>TELEGRAM</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="whatsapp"
+                  >
+                    <img src="./messenger.svg" alt="WhatsApp" />
+                    <span>WHATSAP</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact__divider" aria-hidden="true"></div>
+
+              <div class="contact__brand">
+                <img class="contact__logo" src="./icon.svg" alt="IQT GROUP" />
+                <span class="contact__rights">Все права защищены</span>
+              </div>
+
+              <ul class="contact__agreements">
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я даю согласие на обработку персональных данных в
+                    соответствии с Политикой конфиденциальности
+                  </span>
+                </li>
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я согласен на получение информационных и маркетинговых
+                    рассылок (вы в любой момент можете отказаться от получения
+                    писем)
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <p class="connect__subtitle">
+          Или сразу свяжитесь с нами в любом мессенджере
+        </p>
+
+        <div class="connect__options">
+          <a class="connect__option" href="#">
+            <img
+              class="connect__icon"
+              src="./whatsappsilver.png"
+              alt="WhatsApp"
+            />
+            <span>Написать WhatsApp</span>
+          </a>
+          <a class="connect__option" href="#">
+            <img
+              class="connect__icon"
+              src="./telegramsilver.png"
+              alt="Telegram"
+            />
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <header class="header">
+        <div class="header__left" data-aos="fade-up">
+          <a class="logo" href="/" aria-label="IQT Group">
+            <img class="logo__icon" src="./icon.svg" alt="Логотип" />
+            <div class="logo__text">
+              <div class="logo__meta">
+                <span>Налоговый консалтинг</span>
+                <span>Работаем с 2014 года</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="header__actions" data-aos="fade-up">
+          <a class="icon-btn" href="#" aria-label="Написать в Telegram">
+            <img src="./plane.svg" alt="Telegram" />
+          </a>
+          <a class="icon-btn" href="#" aria-label="Написать в мессенджер">
+            <img src="./messenger.svg" alt="WhatsApp" />
+          </a>
+          <button class="cta-small" data-callback-open>ЗАКАЗАТЬ ЗВОНОК</button>
+          <a class="phone" href="tel:+74997119988">+7 499 711 99 88</a>
+        </div>
+        <button class="burger" aria-label="Открыть меню">
+          <img src="./menu.svg" alt="Меню" />
+        </button>
+      </header>
+      <div class="success-container" data-aos="fade-up">
+        <img src="./done.png" alt="" />
+        <h3>
+          <span id="nameWrap" style="display: none"
+            ><span id="userName"></span>, </span
+          >спасибо, мы приняли вашу заявку на звонок!
+        </h3>
+        <p>
+          Специалист компании IQT свяжется с вами в указанное время и
+          проконсультирует по всем вопросам
+        </p>
+        <a class="cta-small" href="/"> вернуться назад </a>
+      </div>
+    </main>
+    <section class="site-footer" aria-label="Навигация внизу страницы">
+      <div class="site-footer__container">
+        <div class="site-footer__top">
+          <div class="site-footer__brand" data-aos="fade-up">
+            <img
+              class="site-footer__logo"
+              src="./icon-black.svg"
+              alt="IQT GROUP"
+            />
+            <span>Налоговый консалтинг </span>
+          </div>
+          <div class="header__actions" data-aos="fade-up">
+            <a
+              class="icon-btn"
+              href="#"
+              aria-label="Написать в Telegram"
+              style="background: #b8dcf4"
+            >
+              <img src="./plane-black.svg" alt="Telegram" />
+            </a>
+            <a
+              class="icon-btn"
+              href="#"
+              aria-label="Написать в мессенджер"
+              style="background: #b8dcf4"
+            >
+              <img src="./whatsapp-black.svg" alt="WhatsApp" />
+            </a>
+            <button
+              class="cta-small"
+              data-callback-open
+              style="background: #b8dcf4; color: #0b1926; font-weight: 800"
+            >
+              ЗАКАЗАТЬ ЗВОНОК
+            </button>
+            <a class="phone" href="tel:+74997119988" style="color: #0b1926">
+              +7 499 711 99 88
+            </a>
+            <button
+              class="icon-btn"
+              aria-label="Закрыть"
+              style="background: #b8dcf4"
+            >
+              <img src="./close-black.svg" alt="Закрыть" />
+            </button>
+          </div>
+        </div>
+        <div class="site-footer__info" data-aos="fade-up">
+          <span style="display: none">
+            ИП Иванов Иван Иванович ИНН: 100000000000 ОГРНИП: 3000000000000
+          </span>
+          <a class="site-footer__email" href="mailto:info@iqt-group.ru"
+            >Info@iqt-group.ru</a
+          >
+        </div>
+
+        <div class="site-footer__services">
+          <div class="services__container" style="margin: 0; display: none">
+            <div class="services__group" style="display: none">
+              <h3 class="services__subtitle" data-aos="fade-up">
+                Сопровождение
+              </h3>
+              <ul class="services__list">
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Комплексное сопровождение налоговых проверок</a>
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Сопровождение на различные допросы</a>
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Сопровождение уголовного дела</a>
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Адвокатский полис</a>
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Рабочий день адвоката/юриста в командировке</a>
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#"
+                    >Разрешение споров в арбитражных судах и судах общей
+                    юрисдикции</a
+                  >
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#"
+                    >Правовая помощь при допросах в правоохранительных органах,
+                    а также органах государственной власти (ФМС и др.)</a
+                  >
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Банкротство</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="services__group">
+              <h3 class="services__subtitle" data-aos="fade-up">Аудит</h3>
+              <ul class="services__list">
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#"
+                    >Аудит налоговых рисков компании глазами налоговой</a
+                  >
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#"
+                    >Полный налоговый аудит компании за последние 3 года</a
+                  >
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#"
+                    >Постоянный мониторинг налоговых рисков компании на
+                    ежемесячной основе</a
+                  >
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Проверка контрагентов</a>
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Due Diligence объекта недвижимости</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="services__group">
+              <h3 class="services__subtitle" data-aos="fade-up">Другое</h3>
+              <ul class="services__list">
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#"
+                    >Тренинг «Безопасное общение с ФНС» (очно и
+                    офлайн-формат)</a
+                  >
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#"
+                    >Разработка дорожной карты перехода на новую юридическую
+                    структуру</a
+                  >
+                </li>
+                <li class="services__item" data-aos="fade-up">
+                  <a href="#">Разработка документов</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="services__grid">
+              <div class="services__group">
+                <h3 class="services__subtitle" data-aos="fade-up">
+                  Консультации
+                </h3>
+                <ul class="services__list">
+                  <li class="services__item" data-aos="fade-up">
+                    <a href="#">Письменные и устные юридические консультации</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="services__group" style="margin-top: 0px">
+                <h3 class="services__subtitle" data-aos="fade-up">
+                  Правовая помощь
+                </h3>
+                <ul class="services__list">
+                  <li class="services__item" data-aos="fade-up">
+                    <a href="#">Участие в подготовке ответов для ФНС</a>
+                  </li>
+                  <li class="services__item" data-aos="fade-up">
+                    <a href="#">Подготовка к комиссии по разрывам НДС</a>
+                  </li>
+                  <li class="services__item" data-aos="fade-up">
+                    <a href="#"
+                      >Правовая помощь при подготовке ответов на запросы и
+                      требования государственных и правоохранительных органов</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal">
+            <ul class="legal__links" data-aos="fade-up">
+              <li><a href="/policy.pdf">Политика конфиденциальности</a></li>
+              <li>ООО «ЛТЗ» (ИНН 7727396012, ОГРН 1187746898790</li>
+              <li style="display:none;"><a href="#">Согласие на информационную рассылку</a></li>
+            </ul>
+            <div class="legal__content" data-aos="fade-up">
+              <p class="legal__disclaimer">
+                Данный интернет-сайт, а также вся информация, предоставленная на
+                нём, носит исключительно информационный характер и ни при каких
+                условиях не является публичной офертой, определяемой положениями
+                Ст. 437 ГК РФ
+              </p>
+              <p class="legal__note">
+                WhatsApp принадлежит компании Meta, которая признана
+                экстремистской организацией на территории РФ
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="offcanvas" aria-hidden="true">
+      <div class="offcanvas__overlay" data-close></div>
+      <aside
+        class="offcanvas__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Меню"
+      >
+        <div class="offcanvas__head">
+          <img class="offcanvas__logo" src="./icon.svg" alt="IQT GROUP" />
+          <button class="offcanvas__close" aria-label="Закрыть">
+            <img src="./close.svg" alt="" />
+          </button>
+        </div>
+        <nav class="offcanvas__nav">
+          <a href="#about" data-scroll>О компании</a>
+          <a href="#advantages" data-scroll>Преимущества</a>
+          <a href="#cases" data-scroll>Кейсы</a>
+          <a href="#services" data-scroll>Услуги</a>
+          <a href="#guarantee" data-scroll>Гарантия</a>
+          <a href="#faq" data-scroll>Частые вопросы</a>
+          <a href="#blog" data-scroll>Блог</a>
+          <a href="#contacts" data-scroll>Контакты</a>
+        </nav>
+        <div class="offcanvas__footer">
+          <a class="offcanvas__phone" href="tel:+74997119988"
+            >+7 499 711 99 88</a
+          >
+          <a class="offcanvas__callback" href="#">ПЕРЕЗВОНИТЬ МНЕ</a>
+          <a class="offcanvas__tg" href="#" aria-label="Написать в Telegram">
+            <img src="./pl.png" alt="Telegram" />
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </aside>
+    </div>
+    <script>
+      document
+        .querySelector('.cookie__agree')
+        ?.addEventListener('click', function () {
+          document.querySelector('.cookie')?.classList.add('cookie--hidden')
+        })
+      document.body.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        if (!header) return
+        header.classList.toggle(
+          'header--scrolled',
+          document.body.scrollTop > 10
+        )
+      })
+      // Offcanvas menu logic (burger)
+      ;(function () {
+        const burger = document.querySelector('.burger')
+        const offcanvas = document.querySelector('.offcanvas')
+        if (!burger || !offcanvas) return
+        const overlay = offcanvas.querySelector('.offcanvas__overlay')
+        const closeBtn = offcanvas.querySelector('.offcanvas__close')
+
+        function openMenu() {
+          // show container first, then trigger transitions in next frame
+          offcanvas.classList.add('offcanvas--visible')
+          // Force a reflow to ensure initial styles are applied before opening
+          void offcanvas.offsetWidth
+          requestAnimationFrame(function () {
+            offcanvas.classList.add('offcanvas--open')
+          })
+          document.body.classList.add('menu-open')
+          burger.setAttribute('aria-expanded', 'true')
+        }
+        function closeMenu() {
+          offcanvas.classList.remove('offcanvas--open')
+          document.body.classList.remove('menu-open')
+          burger.setAttribute('aria-expanded', 'false')
+        }
+
+        // After transition ends, hide the container to detach from layout
+        offcanvas.addEventListener('transitionend', function (e) {
+          if (
+            e.propertyName === 'transform' &&
+            !offcanvas.classList.contains('offcanvas--open')
+          ) {
+            offcanvas.classList.remove('offcanvas--visible')
+          }
+        })
+
+        burger.addEventListener('click', openMenu)
+        overlay?.addEventListener('click', closeMenu)
+        closeBtn?.addEventListener('click', closeMenu)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeMenu()
+        })
+
+        // Smooth-scrolling to sections listed in the menu
+        offcanvas.querySelectorAll('[data-scroll]').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href') || ''
+            if (!href.startsWith('#')) return
+            e.preventDefault()
+            const id = href.slice(1)
+            const target = document.getElementById(id)
+            if (target) {
+              closeMenu()
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          })
+        })
+      })()
+
+      // Cases slider logic
+      ;(function () {
+        const viewport = document.querySelector('.cases__viewport')
+        const track = document.querySelector('.cases__track')
+        const slides = track ? Array.from(track.children) : []
+        const prev = document.querySelector('.cases__nav--prev')
+        const next = document.querySelector('.cases__nav--next')
+        const dotsContainer = document.querySelector('.cases__dots')
+        let dots = dotsContainer
+          ? Array.from(dotsContainer.querySelectorAll('.cases__dot'))
+          : []
+        if (!viewport || !track || slides.length === 0) return
+
+        // Ensure dots count matches slides (useful if markup changes)
+        if (dotsContainer && dots.length !== slides.length) {
+          dotsContainer.innerHTML = ''
+          for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('span')
+            dot.className = 'cases__dot'
+            dotsContainer.appendChild(dot)
+          }
+          dots = Array.from(dotsContainer.querySelectorAll('.cases__dot'))
+        }
+
+        let index = 0
+        function getStepPx() {
+          const styles = getComputedStyle(track)
+          const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0
+          const width = viewport.clientWidth
+          return width + gap
+        }
+        function update() {
+          const step = getStepPx()
+          track.style.transform = `translateX(${-index * step}px)`
+          // sync dots
+          dots.forEach((d, i) =>
+            d.classList.toggle('cases__dot--active', i === index)
+          )
+        }
+        prev?.addEventListener('click', function () {
+          index = (index - 1 + slides.length) % slides.length
+          update()
+        })
+        next?.addEventListener('click', function () {
+          index = (index + 1) % slides.length
+          update()
+        })
+        // Dot click navigation
+        dots.forEach((d, i) =>
+          d.addEventListener('click', function () {
+            index = i
+            update()
+          })
+        )
+        // Swipe with Pointer Events (reliable across browsers)
+        let startX = 0
+        let startY = 0
+        let lastX = 0
+        let dragging = false
+        let suppressClick = false
+        const SWIPE_THRESHOLD = 40
+        viewport.addEventListener('pointerdown', function (e) {
+          if (e.target.closest('.cases__btn')) return
+          startX = e.clientX
+          startY = e.clientY
+          lastX = startX
+          dragging = true
+          try {
+            viewport.setPointerCapture(e.pointerId)
+          } catch {}
+        })
+        viewport.addEventListener('pointermove', function (e) {
+          if (!dragging) return
+          const dx = Math.abs(e.clientX - startX)
+          const dy = Math.abs(e.clientY - startY)
+          if (dx > dy && dx > 10) {
+            e.preventDefault()
+            lastX = e.clientX
+            viewport.classList.add('is-dragging')
+          }
+        })
+        function endPointer(e) {
+          if (!dragging) return
+          const dx = (lastX || e.clientX) - startX
+          if (Math.abs(dx) > SWIPE_THRESHOLD) {
+            if (dx < 0) {
+              index = (index + 1) % slides.length
+            } else {
+              index = (index - 1 + slides.length) % slides.length
+            }
+            update()
+            suppressClick = true
+          }
+          dragging = false
+          viewport.classList.remove('is-dragging')
+          try {
+            viewport.releasePointerCapture(e.pointerId)
+          } catch {}
+        }
+        viewport.addEventListener('pointerup', endPointer)
+        viewport.addEventListener('pointercancel', endPointer)
+        // Suppress accidental click after a swipe gesture
+        // viewport.addEventListener(
+        //   'click',
+        //   function (e) {
+        //     if (suppressClick) {
+        //       e.preventDefault()
+        //       suppressClick = false
+        //     }
+        //   },
+        //   true
+        // )
+        window.addEventListener('resize', update)
+        update()
+      })()
+
+      // FAQ toggle logic
+      ;(function () {
+        const items = document.querySelectorAll('.faq__item')
+        if (!items.length) return
+        items.forEach((item) => {
+          const btn = item.querySelector('.faq__question')
+          const answer = item.querySelector('.faq__answer')
+          const icon = item.querySelector('.faq__icon')
+          if (!btn || !answer) return
+          btn.addEventListener('click', function () {
+            const isOpen = item.classList.toggle('faq__item--open')
+            btn.setAttribute('aria-expanded', String(isOpen))
+            if (isOpen) {
+              answer.removeAttribute('hidden')
+              if (icon) icon.setAttribute('src', './minus.svg')
+            } else {
+              answer.setAttribute('hidden', '')
+              if (icon) icon.setAttribute('src', './plus.svg')
+            }
+          })
+        })
+      })()
+
+      // Blog slider logic: scroll by one card (robust, nearest-card detection)
+      ;(function () {
+        const viewport = document.querySelector('.blog__viewport')
+        const track = document.querySelector('.blog__track')
+        const firstCard = track?.querySelector('.blog__card')
+        const prev = document.querySelector('.blog__nav--prev')
+        const next = document.querySelector('.blog__nav--next')
+        if (!viewport || !track || !firstCard) return
+
+        function getStepPx() {
+          const styles = getComputedStyle(track)
+          const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0
+          const cardWidth = firstCard.getBoundingClientRect().width
+          return cardWidth + gap
+        }
+        const cards = Array.from(track.children)
+        function clampIndex(i) {
+          const step = getStepPx()
+          const visible = Math.max(
+            1,
+            Math.floor((viewport.clientWidth + 0.5) / step)
+          )
+          const max = Math.max(0, cards.length - visible)
+          return Math.min(Math.max(0, i), max)
+        }
+        function getCurrentIndex() {
+          const s = viewport.scrollLeft
+          let best = 0
+          let bestDist = Infinity
+          for (let i = 0; i < cards.length; i++) {
+            const left = cards[i].offsetLeft
+            const d = Math.abs(left - s)
+            if (d < bestDist) {
+              bestDist = d
+              best = i
+            }
+          }
+          return best
+        }
+        function scrollToIndex(index) {
+          const step = getStepPx()
+          const target = clampIndex(index) * step
+          viewport.scrollTo({ left: target, behavior: 'smooth' })
+        }
+        prev?.addEventListener('click', function () {
+          const index = clampIndex(getCurrentIndex() - 1)
+          scrollToIndex(index)
+        })
+        next?.addEventListener('click', function () {
+          const index = clampIndex(getCurrentIndex() + 1)
+          scrollToIndex(index)
+        })
+        window.addEventListener('resize', function () {
+          scrollToIndex(getCurrentIndex())
+        })
+      })()
+
+      // Mobile placeholders for contact-final form
+      ;(function () {
+        const form = document.querySelector('.contact-final__form')
+        if (!form) return
+        const nameInput = form.querySelector(
+          '.contact-final__row .contact-final__row-item:nth-child(1) .contact-final__input'
+        )
+        const roleInput = form.querySelector(
+          '.contact-final__row .contact-final__row-item:nth-child(2) .contact-final__input'
+        )
+        const problemTextarea = form.querySelector('.contact-final__textarea')
+        if (!nameInput || !roleInput || !problemTextarea) return
+
+        const desktop = {
+          name: nameInput.getAttribute('placeholder') || '',
+          role: roleInput.getAttribute('placeholder') || '',
+          problem: problemTextarea.getAttribute('placeholder') || '',
+        }
+        const mobile = {
+          name: 'Ваше имя',
+          role: 'Ваша должность',
+          problem: 'Опишите проблему',
+        }
+        const mq = window.matchMedia('(max-width: 767px)')
+        function applyPlaceholders() {
+          const useMobile = mq.matches
+          nameInput.setAttribute(
+            'placeholder',
+            useMobile ? mobile.name : desktop.name
+          )
+          roleInput.setAttribute(
+            'placeholder',
+            useMobile ? mobile.role : desktop.role
+          )
+          problemTextarea.setAttribute(
+            'placeholder',
+            useMobile ? mobile.problem : desktop.problem
+          )
+        }
+        if (mq.addEventListener) {
+          mq.addEventListener('change', applyPlaceholders)
+        } else if (mq.addListener) {
+          mq.addListener(applyPlaceholders)
+        }
+        applyPlaceholders()
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const elements = Array.from(document.querySelectorAll('[data-aos]'))
+        if (!elements.length) return
+
+        const prefersReduced = window.matchMedia(
+          '(prefers-reduced-motion: reduce)'
+        ).matches
+
+        function applyInitialState(el) {
+          const duration = parseInt(
+            el.getAttribute('data-aos-duration') || '600',
+            10
+          )
+          const delay = parseInt(el.getAttribute('data-aos-delay') || '0', 10)
+          el.style.setProperty('--aos-duration', duration + 'ms')
+          if (delay) el.style.transitionDelay = delay + 'ms'
+        }
+
+        function animateIn(el) {
+          el.classList.add('aos-in')
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateIn(entry.target)
+                observer.unobserve(entry.target)
+              }
+            })
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -10% 0px',
+          }
+        )
+
+        elements.forEach((el) => {
+          applyInitialState(el)
+          if (prefersReduced) {
+            // Respect reduced motion: show immediately
+            animateIn(el)
+          } else {
+            observer.observe(el)
+          }
+        })
+
+        // In case late-loading images shift layout, ensure IO runs after load
+        window.addEventListener('load', function () {
+          elements.forEach((el) => {
+            // No explicit refresh needed; IntersectionObserver accounts for it
+          })
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        var preloader = document.querySelector('.preloader')
+        if (!preloader) return
+
+        function hidePreloader() {
+          if (!preloader || preloader.classList.contains('preloader--hidden'))
+            return
+          preloader.classList.remove('preloader--visible')
+          var onEnd = function (e) {
+            if (e.propertyName !== 'opacity') return
+            preloader.classList.add('preloader--hidden')
+            preloader.removeEventListener('transitionend', onEnd)
+            document.body.classList.remove('is-preloading')
+          }
+          preloader.addEventListener('transitionend', onEnd)
+        }
+
+        // Fade out when the page finishes loading
+        window.addEventListener('load', hidePreloader)
+        // Fallback in case load is delayed
+        setTimeout(hidePreloader, 3500)
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const triggers = Array.from(
+          document.querySelectorAll('[data-callback-open]')
+        )
+        const modal = document.getElementById('callback-modal')
+        if (!triggers.length || !modal) return
+        const overlay = modal.querySelector('.modal__overlay')
+        const closeBtn = modal.querySelector('.modal__close')
+        const btnNow = modal.querySelector('[data-type="now"]')
+        const btnLater = modal.querySelector('[data-type="later"]')
+        const datetimeInput = modal.querySelector('[data-datetime]')
+
+        function openModal() {
+          modal.classList.add('modal--visible')
+          // reflow then animate
+          void modal.offsetWidth
+          requestAnimationFrame(function () {
+            modal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+        function closeModal() {
+          modal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+        modal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !modal.classList.contains('modal--open')
+          ) {
+            modal.classList.remove('modal--visible')
+          }
+        })
+
+        function setMode(mode) {
+          const isLater = mode === 'later'
+          if (datetimeInput) {
+            datetimeInput.style.display = isLater ? '' : 'none'
+            datetimeInput.disabled = !isLater
+          }
+          btnNow?.classList.toggle('is-active', !isLater)
+          btnLater?.classList.toggle('is-active', isLater)
+        }
+        setMode('later')
+
+        triggers.forEach(function (el) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault()
+            openModal()
+          })
+        })
+        overlay?.addEventListener('click', closeModal)
+        closeBtn?.addEventListener('click', closeModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeModal()
+        })
+        btnNow?.addEventListener('click', function () {
+          setMode('now')
+        })
+        btnLater?.addEventListener('click', function () {
+          setMode('later')
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const serviceModal = document.getElementById('service-modal')
+        if (!serviceModal) return
+        const openers = Array.from(
+          document.querySelectorAll(
+            '#services .services__list .services__item a'
+          )
+        )
+        if (!openers.length) return
+        const overlay = serviceModal.querySelector('.modal__overlay')
+        const closeBtn = serviceModal.querySelector('.modal__close')
+
+        function openServiceModal() {
+          serviceModal.classList.add('modal--visible')
+          void serviceModal.offsetWidth
+          requestAnimationFrame(function () {
+            serviceModal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+        function closeServiceModal() {
+          serviceModal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+        serviceModal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !serviceModal.classList.contains('modal--open')
+          ) {
+            serviceModal.classList.remove('modal--visible')
+          }
+        })
+
+        openers.forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            e.preventDefault()
+            openServiceModal()
+          })
+        })
+        overlay?.addEventListener('click', closeServiceModal)
+        closeBtn?.addEventListener('click', closeServiceModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeServiceModal()
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const casesModal = document.getElementById('cases-modal')
+        if (!casesModal) return
+        const openers = Array.from(document.querySelectorAll('.cases__btn'))
+        if (!openers.length) return
+        const overlay = casesModal.querySelector('.modal__overlay')
+        const closeBtn = casesModal.querySelector('.modal__close')
+        function openCasesModal() {
+          casesModal.classList.add('modal--visible')
+          void casesModal.offsetWidth
+          requestAnimationFrame(function () {
+            casesModal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+        function closeCasesModal() {
+          casesModal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+        casesModal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !casesModal.classList.contains('modal--open')
+          ) {
+            casesModal.classList.remove('modal--visible')
+          }
+        })
+
+        openers.forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            openCasesModal()
+          })
+        })
+        overlay?.addEventListener('click', closeCasesModal)
+        closeBtn?.addEventListener('click', closeCasesModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeCasesModal()
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        var el = document.getElementById('userName')
+        var wrap = document.getElementById('nameWrap')
+        if (!el || !wrap) return
+        try {
+          var params = new URLSearchParams(window.location.search)
+          var name = params.get('name') || ''
+          name = name.replace(/[<>]/g, '').trim()
+          if (name) {
+            if (name.length > 100) name = name.slice(0, 100)
+            el.textContent = name
+            wrap.style.display = ''
+          }
+        } catch (e) {}
+      })()
+    </script>
+    <script>
+      // Russian phone number mask for all tel inputs
+      ;(function () {
+        const phoneInputs = document.querySelectorAll('input[type="tel"]')
+        if (!phoneInputs.length) return
+
+        function formatPhoneNumber(value) {
+          // Remove all non-numeric characters
+          const cleaned = value.replace(/\D/g, '')
+
+          // Start with +7
+          let formatted = '+7'
+
+          if (cleaned.length > 1) {
+            // Add opening parenthesis and first 3 digits
+            formatted += ' (' + cleaned.substring(1, 4)
+          }
+
+          if (cleaned.length >= 5) {
+            // Close parenthesis
+            formatted += ') ' + cleaned.substring(4, 7)
+          }
+
+          if (cleaned.length >= 8) {
+            // Add hyphen and next 2 digits
+            formatted += '-' + cleaned.substring(7, 9)
+          }
+
+          if (cleaned.length >= 10) {
+            // Add hyphen and last 2 digits
+            formatted += '-' + cleaned.substring(9, 11)
+          }
+
+          return formatted
+        }
+
+        function setCursorPosition(input, position) {
+          if (input.setSelectionRange) {
+            input.setSelectionRange(position, position)
+          }
+        }
+
+        function handleInput(e) {
+          const input = e.target
+          const oldValue = input.value
+          const oldCursorPos = input.selectionStart
+
+          // Get only numbers
+          let numbers = oldValue.replace(/\D/g, '')
+
+          // If user tries to delete +7, keep it
+          if (numbers.length === 0 || numbers[0] !== '7') {
+            numbers = '7' + numbers.replace(/^7+/, '')
+          }
+
+          // Limit to 11 digits (7 + 10 digits)
+          numbers = numbers.substring(0, 11)
+
+          // Format the number
+          const formatted = formatPhoneNumber(numbers)
+
+          // Update input value
+          input.value = formatted
+
+          // Try to maintain cursor position
+          if (oldValue !== formatted) {
+            // If user is typing (not deleting)
+            if (oldValue.length < formatted.length) {
+              let newPos = oldCursorPos + (formatted.length - oldValue.length)
+              // Skip over formatting characters
+              while (
+                newPos < formatted.length &&
+                (formatted[newPos] === ' ' ||
+                  formatted[newPos] === '(' ||
+                  formatted[newPos] === ')' ||
+                  formatted[newPos] === '-')
+              ) {
+                newPos++
+              }
+              setTimeout(() => setCursorPosition(input, newPos), 0)
+            } else {
+              setTimeout(() => setCursorPosition(input, oldCursorPos), 0)
+            }
+          }
+        }
+
+        function handleFocus(e) {
+          const input = e.target
+          // If empty or just contains formatting, set initial value
+          if (!input.value || input.value.replace(/\D/g, '').length === 0) {
+            input.value = '+7 ('
+            setTimeout(() => setCursorPosition(input, input.value.length), 0)
+          }
+        }
+
+        function handleBlur(e) {
+          const input = e.target
+          // If only +7 ( or similar partial input, clear it
+          const numbers = input.value.replace(/\D/g, '')
+          if (numbers.length <= 1) {
+            input.value = ''
+          }
+        }
+
+        function handleKeyDown(e) {
+          const input = e.target
+          const cursorPos = input.selectionStart
+          const value = input.value
+
+          // Don't allow deletion of +7 prefix
+          if ((e.key === 'Backspace' || e.key === 'Delete') && cursorPos <= 3) {
+            e.preventDefault()
+            setCursorPosition(input, 4)
+          }
+        }
+
+        function handlePaste(e) {
+          e.preventDefault()
+          const paste = (e.clipboardData || window.clipboardData).getData(
+            'text'
+          )
+          const numbers = paste.replace(/\D/g, '')
+
+          // If pasted number starts with 8, replace with 7
+          let cleaned = numbers
+          if (cleaned[0] === '8') {
+            cleaned = '7' + cleaned.substring(1)
+          } else if (cleaned[0] !== '7') {
+            cleaned = '7' + cleaned
+          }
+
+          // Format and set
+          const formatted = formatPhoneNumber(cleaned.substring(0, 11))
+          e.target.value = formatted
+        }
+
+        // Apply mask to all phone inputs
+        phoneInputs.forEach((input) => {
+          input.addEventListener('input', handleInput)
+          input.addEventListener('focus', handleFocus)
+          input.addEventListener('blur', handleBlur)
+          input.addEventListener('keydown', handleKeyDown)
+          input.addEventListener('paste', handlePaste)
+
+          // Set initial value if already filled
+          if (input.value) {
+            const numbers = input.value.replace(/\D/g, '')
+            if (numbers.length > 0) {
+              input.value = formatPhoneNumber(numbers)
+            }
+          }
+        })
+      })()
+    </script>
+    <script>
+      // Contact method selection
+      ;(function () {
+        const forms = document.querySelectorAll('.contact__form')
+        if (!forms.length) return
+
+        forms.forEach(function (form) {
+          const chips = form.parentElement.querySelectorAll('.contact__chip')
+          const methodInput = form.querySelector('input[name="contact_method"]')
+          if (!chips.length || !methodInput) return
+
+          chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+              const method = chip.getAttribute('data-method')
+              if (!method) return
+
+              // Update active state
+              chips.forEach(function (c) {
+                c.classList.remove('is-active')
+              })
+              chip.classList.add('is-active')
+
+              // Update hidden input
+              methodInput.value = method
+            })
+          })
+        })
+      })()
+    </script>
+    <script>
+      // Form submission handler
+      ;(function () {
+        const forms = document.querySelectorAll(
+          '.contact__form, .callback-form'
+        )
+        if (!forms.length) return
+
+        forms.forEach(function (form) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault()
+
+            // Get form data
+            const formData = new FormData(form)
+            const submitButton = form.querySelector('button[type="submit"]')
+            const originalButtonText = submitButton
+              ? submitButton.textContent
+              : ''
+
+            // Disable submit button
+            if (submitButton) {
+              submitButton.disabled = true
+              submitButton.textContent = 'Отправка...'
+            }
+
+            // Send form data
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+              },
+            })
+              .then(function (response) {
+                return response.json()
+              })
+              .then(function (data) {
+                if (data.success) {
+                  // Redirect to success page with name
+                  const name = formData.get('name') || ''
+                  const encodedName = encodeURIComponent(name)
+                  window.location.href = './success.html?name=' + encodedName
+                } else {
+                  // Show error message
+                  alert(data.message || 'Произошла ошибка. Попробуйте позже.')
+                  // Re-enable submit button
+                  if (submitButton) {
+                    submitButton.disabled = false
+                    submitButton.textContent = originalButtonText
+                  }
+                }
+              })
+              .catch(function (error) {
+                console.error('Error:', error)
+                alert('Произошла ошибка при отправке формы. Попробуйте позже.')
+                // Re-enable submit button
+                if (submitButton) {
+                  submitButton.disabled = false
+                  submitButton.textContent = originalButtonText
+                }
+              })
+          })
+        })
+      })()
+    </script>
+  </body>
+</html>

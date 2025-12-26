@@ -1,0 +1,49 @@
+27:        <p class="service-modal__lead"></p>
+29:          <p>Задача</p>
+30:          <p id="case-task-text"></p>
+34:            <p>Ситуация</p>
+35:            <p id="case-situation">
+47:            <p>
+51:            <p id="case-situation-description-text">
+60:          <p>наши шаги</p>
+64:          <p>Результат</p>
+68:          <p>Вывод для бизнеса</p>
+69:          <p id="case-output-text"></p>
+77:              <p class="contact__subtitle">
+166:        <p class="connect__subtitle">
+207:        <p class="service-modal__lead"></p>
+209:          <p>Задача</p>
+210:          <p id="nalog-task-text"></p>
+214:            <p>Ситуация</p>
+215:            <p id="nalog-situation">
+227:            <p>
+231:            <p id="nalog-situation-description-text">
+240:          <p>наши шаги</p>
+244:          <p>Результат</p>
+248:          <p>Вывод для бизнеса</p>
+249:          <p id="nalog-output-text"></p>
+257:              <p class="contact__subtitle">
+346:        <p class="connect__subtitle">
+384:        <p class="service-modal__lead"></p>
+386:          <p>Задача</p>
+387:          <p id="case-task-text"></p>
+391:            <p>Ситуация</p>
+392:            <p id="case-situation">
+404:            <p>
+408:            <p id="case-situation-description-text">
+417:          <p>наши шаги</p>
+421:          <p>Результат</p>
+425:          <p>Вывод для бизнеса</p>
+426:          <p id="case-output-text"></p>
+434:              <p class="contact__subtitle">
+523:        <p class="connect__subtitle">
+565:        <p class="modal__subtitle">
+591:            <p class="callback-time__label">КОГДА ВАМ ПОЗВОНИТЬ?</p>
+648:        <p class="service-modal__lead"></p>
+649:        <p class="service-modal__description"></p>
+653:              <p class="contact__subtitle">
+659:              <p class="contact__subtitle">
+748:        <p class="connect__subtitle">
+817:        <p class="subtitle">
+834:              <path
+849:          <p>

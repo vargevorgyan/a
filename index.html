@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>IQT Group — Налоговый консалтинг</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="is-preloading">
+    <div class="preloader preloader--visible" aria-hidden="true">
+      <img class="preloader__logo" src="./icon.svg" alt="" />
+    </div>
+    <!-- Cases modal -->
+    <div class="modal modal2" id="cases-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Снизили размеры налоговых требований ФНС на 70% для строительной компании и помогли ей сэкономить сотни миллионов рублей"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+
+        <p class="service-modal__lead"></p>
+        <div class="service-modal__item" id="case-task">
+          <p>Задача</p>
+          <p id="case-task-text"></p>
+        </div>
+        <div class="service-modal__wrapper">
+          <div class="service-modal__item">
+            <p>Ситуация</p>
+            <p id="case-situation">
+              К нам обратилась строительная компания, оказавшаяся под
+              пристальным вниманием налоговой из-за сделок с семью
+              контрагентами. Инспекция направляла многочисленные требования,
+              вызывала руководство на комиссии и допрашивала сотрудников.
+              Попытки самостоятельно отвечать на запросы лишь ухудшали
+              положение: налоговая накапливала всё более серьезную доказательную
+              базу.
+            </p>
+          </div>
+
+          <div class="service-modal__item" id="case-situation-description">
+            <p>
+              Почему ситуация <br />
+              осложнилась
+            </p>
+            <p id="case-situation-description-text">
+              Компания обратилась за помощью на позднем этапе, когда часть
+              протоколов и объяснений уже была представлена. Некоторые ответы
+              директора под протокол фактически усилили аргументы инспекции, а
+              не ослабили их.
+            </p>
+          </div>
+        </div>
+        <div class="service-modal__item">
+          <p>наши шаги</p>
+          <div id="case-steps"></div>
+        </div>
+        <div class="result">
+          <p>Результат</p>
+          <div id="case-result"></div>
+        </div>
+        <div class="service-modal__item" id="case-output">
+          <p>Вывод для бизнеса</p>
+          <p id="case-output-text"></p>
+        </div>
+        <section class="contact" aria-label="Бесплатная консультация">
+          <div class="contact__container">
+            <div class="contact__left">
+              <h2 class="contact__title">
+                Получите бесплатную консультацию от эксперта IQT
+              </h2>
+              <p class="contact__subtitle">
+                Выберите удобный формат встречи: дистанционно или встретиться
+                вживую в Москве в удобном для вас месте
+              </p>
+              <div class="contact__nda">
+                <img src="./lock.png" alt="NDA" />
+                <span>Перед консультацией подписываем NDA о неразглашении</span>
+              </div>
+            </div>
+            <div class="contact__right">
+              <form class="contact__form" action="./send.php" method="post">
+                <input type="hidden" name="service_name" value="" />
+                <input type="hidden" name="contact_method" value="phone" />
+                <input
+                  class="contact__input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input
+                  class="contact__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (999) 555-55-55"
+                  required
+                />
+                <button class="cta-main contact__submit" type="submit">
+                  Получить бесплатную консультацию
+                </button>
+              </form>
+
+              <div class="contact__methods">
+                <div class="contact__methods-title">СПОСОБ СВЯЗИ</div>
+                <div class="contact__chips">
+                  <button
+                    type="button"
+                    class="contact__chip is-active"
+                    data-method="phone"
+                  >
+                    <img src="./call.svg" alt="Звонок" />
+                    <span>ЗВОНОК</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="telegram"
+                  >
+                    <img src="./plane.svg" alt="Telegram" />
+                    <span>TELEGRAM</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="whatsapp"
+                  >
+                    <img src="./messenger.svg" alt="WhatsApp" />
+                    <span>WHATSAP</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact__divider" aria-hidden="true"></div>
+
+              <div class="contact__brand">
+                <img class="contact__logo" src="./icon.svg" alt="IQT GROUP" />
+                <span class="contact__rights">Все права защищены</span>
+              </div>
+
+              <ul class="contact__agreements">
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я даю согласие на обработку персональных данных в
+                    соответствии с Политикой конфиденциальности
+                  </span>
+                </li>
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я согласен на получение информационных и маркетинговых
+                    рассылок (вы в любой момент можете отказаться от получения
+                    писем)
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <p class="connect__subtitle">
+          Или сразу свяжитесь с нами в любом мессенджере
+        </p>
+
+        <div class="connect__options">
+          <a
+            class="connect__option"
+            href="https://wa.me/message/7YZMK3NHP73YJ1"
+          >
+            <img
+              class="connect__icon"
+              src="./whatsappsilver.png"
+              alt="WhatsApp"
+            />
+            <span>Написать WhatsApp</span>
+          </a>
+          <a class="connect__option" href="https://t.me/IQTGroupBot">
+            <img
+              class="connect__icon"
+              src="./telegramsilver.png"
+              alt="Telegram"
+            />
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal2" id="nalog-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Снизили размеры налоговых требований ФНС на 70% для строительной компании и помогли ей сэкономить сотни миллионов рублей"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+
+        <p class="service-modal__lead">
+          Актуальные изменения в налоговом законодательстве России в 2025-2026
+          годах: что нужно знать бизнесу
+        </p>
+
+        <p class="nal_p2" style="padding-top: 16px">
+          В 2025 и 2026 годах российское налоговое законодательство претерпевает
+          ряд существенных изменений, которые затронут практически все сферы
+          бизнеса. В рамках масштабной налоговой реформы, утвержденной
+          Федеральным законом от 28.11.2025 № 425-ФЗ, вводятся новые ставки
+          налогов, корректируются условия применения специальных режимов и
+          появляются новые сборы. Для юридических лиц и индивидуальных
+          предпринимателей крайне важно заранее подготовиться к этим
+          нововведениям, чтобы адаптировать свои бизнес-процессы и избежать
+          штрафных санкций. В этой статье мы подробно рассмотрим ключевые
+          изменения и дадим практические рекомендации.
+        </p>
+        <p class="nal_p1">Повышение основной ставки НДС до 22%</p>
+        <p class="nal_p2">
+          Одним из наиболее значимых и чувствительных для экономики нововведений
+          является повышение основной ставки налога на добавленную стоимость
+          (НДС) с 20% до 22%. Новая ставка начнет действовать с 1 января 2026
+          года и будет применяться ко всем товарам, работам и услугам,
+          отгруженным или оказанным начиная с этой даты, вне зависимости от даты
+          заключения договора. Важно отметить, что льготные ставки НДС в размере
+          10% (для социально значимых товаров) и 0% (в частности, для экспорта)
+          сохраняются. Особое внимание следует уделить переходному периоду. Ниже
+          в таблице представлены разъяснения по применению ставок в различных
+          ситуациях (для ОСНО).
+        </p>
+
+        <div class="table_container">
+          <div class="table">
+            <div class="table_header">
+              <div>Ситуация</div>
+              <div
+                style="
+                  border-left: 1px solid #010208;
+                  border-right: 1px solid #010208;
+                "
+              >
+                Применяемая ставка НДС
+              </div>
+              <div>Пояснение</div>
+            </div>
+            <div class="table_row">
+              <div style="border-right-width: 1px !important">
+                Отгрузка товаров в 2025 г., оплата в 2026 г.
+              </div>
+              <div style="border-right-width: 1px !important">20%</div>
+              <div>
+                Налоговая база определяется на момент отгрузки. Корректировка
+                при получении оплаты не требуется.
+              </div>
+            </div>
+            <div class="table_row">
+              <div
+                style="
+                  border-right-width: 1px !important;
+                  border-top-width: 1px !important;
+                "
+              >
+                Аванс получен в 2025 г., отгрузка в 2026 г.
+              </div>
+              <div
+                style="
+                  border-right-width: 1px !important;
+                  border-top-width: 1px !important;
+                "
+              >
+                20/120 с аванса, 22% при отгрузке
+              </div>
+              <div style="border-top-width: 1px !important">
+                При получении аванса продавец исчисляет НДС по расчётной ставке
+                20/120. При отгрузке в 2026 году применяется ставка 22%, а ранее
+                уплаченный с аванса налог принимается к вычету.
+              </div>
+            </div>
+            <div class="table_row">
+              <div
+                style="
+                  border-top-width: 1px !important;
+                  border-right-width: 1px !important;
+                "
+              >
+                Возврат в 2026 г. товара, купленного в 2025 г.
+              </div>
+              <div
+                style="
+                  border-top-width: 1px !important;
+                  border-right-width: 1px !important;
+                "
+              >
+                20%
+              </div>
+              <div style="border-top-width: 1px !important">
+                Продавец выставляет корректировочный счёт-фактуру, применяя
+                ставку, действовавшую на момент реализации.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="nal_p2">
+          Эти изменения потребуют от компаний пересмотра договорных отношений с
+          контрагентами, обновления учетных систем и программного обеспечения
+          для корректного формирования счетов-фактур и налоговой отчетности. <br />
+          [1] Федеральный закон от 28.11.2025 № 425-ФЗ<br />
+          [2] Письмо ФНС России от 15.12.2025 N АБ-4-20/11248@<br />
+          [3] Письмо ФНС России от 11.12.2025 N АБ-4-20/11176@
+        </p>
+        <p class="nal_p1">
+          Изменения в Упрощенной системе налогообложения (УСН)
+        </p>
+        <div class="nal_p2">
+          Упрощенная система налогообложения, популярная среди малого и среднего
+          бизнеса, также подверглась значительным корректировкам. Главное
+          нововведение — поэтапное введение обязанности уплачивать НДС для
+          налогоплательщиков на УСН при превышении определенных порогов дохода. 
+          С 1 января 2026 года компании и ИП на УСН будут обязаны платить НДС,
+          если их доходы за предшествующий год превысили 20 миллионов рублей.
+          Этот порог будет постепенно снижаться: до 15 млн рублей в 2027 году и
+          до 10 млн рублей в 2028 году. Это нововведение требует от
+          предпринимателей, приближающихся к данным лимитам, заранее
+          подготовиться к ведению учета НДС и работе с этим налогом. В то же
+          время, были проиндексированы и повышены лимиты для сохранения права на
+          применение самого спецрежима УСН. С 2026 года они составят:
+          <ul class="service-modal__list">
+            <li>Предельный размер годового дохода: 490,5 млн рублей.</li>
+            <li>
+              Предельная остаточная стоимость основных средств: 218 млн рублей.
+            </li>
+          </ul>
+          Кроме того, с 2026 года расширяется перечень расходов, которые можно
+          учитывать при расчете налога на УСН с объектом «доходы минус расходы».
+          В него включены затраты на модернизацию и реконструкцию нематериальных
+          активов, а сам перечень становится открытым, что дает больше гибкости
+          в учете затрат.
+          <br />
+          [1] Федеральный закон от 28.11.2025 № 425-ФЗ  <br />[2] Приказ
+          Минэкономразвития России от 06.11.2025 № 734
+        </div>
+        <p class="nal_p1">Изменения в налоговом администрировании</p>
+        <div class="nal_p2">
+          С 1 сентября 2026 года вступают в силу поправки, которые меняют
+          процедуры налогового контроля. Среди ключевых нововведений:
+          <br />
+          <br />
+          <ul class="service-modal__list">
+            <li>
+              Дистанционное рассмотрение материалов: Налоговые органы смогут
+              рассматривать материалы проверок с использованием
+              видео-конференц-связи.
+            </li>
+            <li>
+              Расширение полномочий: В рамках дополнительных мероприятий
+              налогового контроля инспекторы получат право проводить осмотр
+              территорий и помещений, а также выемку документов и предметов.
+            </li>
+            <li>
+              Проверка текущего года: При проведении выездной налоговой проверки
+              инспекция сможет проверить налоговые периоды текущего календарного
+              года, которые истекли на момент вынесения решения о проведении
+              проверки.
+            </li>
+            <li>
+              Централизация контроля: Закрепляется правило, согласно которому
+              камеральную проверку может провести не только инспекция по месту
+              подачи декларации, но и любой другой налоговый орган,
+              уполномоченный ФНС. Аналогичный порядок вводится и для
+              рассмотрения жалоб. О таком нестандартном порядке
+              налогоплательщика должны будут уведомить.
+            </li>
+          </ul>
+        </div>
+        <p class="nal_p1">Новый порядок уменьшения штрафов</p>
+        <div class="nal_p2">
+          Еще одно важное изменение, вступающее в силу с 1 сентября 2026 года,
+          касается порядка снижения штрафов за налоговые правонарушения. Если
+          ранее максимальный предел снижения штрафа при наличии смягчающих
+          обстоятельств не был законодательно установлен, то теперь вводится
+          четкое ограничение: размер штрафа может быть уменьшен не более чем в
+          10 раз по сравнению с первоначально начисленной суммой. При этом
+          минимальный порог снижения — в 2 раза остается без изменений.
+          Нововведение ограничивает возможность значительного снижения санкций
+          даже при наличии весомых смягчающих факторов.  Эти изменения требуют
+          от налогоплательщиков большей внимательности и готовности к новым
+          форматам взаимодействия с контролирующими органами.
+          <br />
+          [1] Федеральный закон от 23.07.2025 № 227-ФЗ <br />[2] Федеральный
+          закон от 28.11.2025 № 431-ФЗ
+        </div>
+        <p class="nal_p1">Изменения по страховым взносам и МРОТ</p>
+        <div class="nal_p2">
+          С 1 января 2026 года произойдут важные изменения, влияющие на расчет
+          заработной платы и страховых отчислений.  Во-первых, устанавливается
+          новый Минимальный размер оплаты труда (МРОТ) в размере 27 093 рубля в
+          месяц, что почти на 21% выше показателя 2025 года (22 440 рублей). Это
+          повлечет за собой необходимость пересмотра заработных плат
+          сотрудников, чьи оклады ниже нового минимума, а также повлияет на
+          расчет пособий по временной нетрудоспособности и других социальных
+          выплат.
+          <br />
+          Во-вторых, увеличивается единая предельная величина базы для
+          исчисления страховых взносов. На 2026 год она установлена в размере 2
+          979 000 рублей (в 2025 году — 2 759 000 рублей). С выплат работнику,
+          превышающих этот лимит в течение года, страховые взносы уплачиваются
+          по пониженному тарифу. 
+          <br />
+          [1] Федеральный закон от 28.11.2025 № 429-ФЗ <br />[2] Постановление
+          Правительства РФ от 31.10.2025 № 1705
+        </div>
+        <p class="nal_p1">Новый технологический сбор</p>
+        <div class="nal_p2">
+          С 1 сентября 2026 года вводится новый вид обязательного платежа —
+          технологический сбор. Его будут уплачивать организации и ИП, которые
+          производят в России или ввозят на ее территорию электронную
+          компонентную базу (электронные модули) и продукцию с ее содержанием.
+          Перечень такой продукции будет утвержден Правительством РФ. Размер
+          сбора будет фиксированным за каждую единицу продукции, но не более 5
+          000 рублей. Это нововведение направлено на поддержку отечественных
+          производителей электроники и развитие отрасли. [1] Федеральный закон
+          от 28.11.2025 № 425-ФЗ
+        </div>
+        <p class="nal_p1">Как бизнесу подготовиться к новым реалиям?</p>
+        <div class="nal_p2">
+          Предстоящие изменения в налоговом законодательстве носят комплексный
+          характер и требуют от бизнеса серьезной подготовки.  Повышение НДС,
+          реформа УСН, новые правила администрирования и другие нововведения
+          требуют не просто поверхностной адаптации, а глубокого стратегического
+          пересмотра бизнес-модели. Необходим профессиональный подход к
+          налоговому структурированию и выбору оптимальной модели ведения
+          деятельности.  Наша команда экспертов готова помочь вам разобраться во
+          всех тонкостях реформы. Мы предлагаем комплексные консультации,
+          проведем аудит вашей текущей структуры и разработаем индивидуальную
+          дорожную карту для безболезненного перехода на новые правила. Мы
+          поможем обеспечить вашему бизнесу безопасность и процветание в новой
+          налоговой реальности!
+        </div>
+        <section class="contact" aria-label="Бесплатная консультация">
+          <div class="contact__container">
+            <div class="contact__left">
+              <h2 class="contact__title">
+                Получите бесплатную консультацию от эксперта IQT
+              </h2>
+              <p class="contact__subtitle">
+                Выберите удобный формат встречи: дистанционно или встретиться
+                вживую в Москве в удобном для вас месте
+              </p>
+              <div class="contact__nda">
+                <img src="./lock.png" alt="NDA" />
+                <span>Перед консультацией подписываем NDA о неразглашении</span>
+              </div>
+            </div>
+            <div class="contact__right">
+              <form class="contact__form" action="./send.php" method="post">
+                <input type="hidden" name="service_name" value="" />
+                <input type="hidden" name="contact_method" value="phone" />
+                <input
+                  class="contact__input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input
+                  class="contact__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (999) 555-55-55"
+                  required
+                />
+                <button class="cta-main contact__submit" type="submit">
+                  Получить бесплатную консультацию
+                </button>
+              </form>
+
+              <div class="contact__methods">
+                <div class="contact__methods-title">СПОСОБ СВЯЗИ</div>
+                <div class="contact__chips">
+                  <button
+                    type="button"
+                    class="contact__chip is-active"
+                    data-method="phone"
+                  >
+                    <img src="./call.svg" alt="Звонок" />
+                    <span>ЗВОНОК</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="telegram"
+                  >
+                    <img src="./plane.svg" alt="Telegram" />
+                    <span>TELEGRAM</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="whatsapp"
+                  >
+                    <img src="./messenger.svg" alt="WhatsApp" />
+                    <span>WHATSAP</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact__divider" aria-hidden="true"></div>
+
+              <div class="contact__brand">
+                <img class="contact__logo" src="./icon.svg" alt="IQT GROUP" />
+                <span class="contact__rights">Все права защищены</span>
+              </div>
+
+              <ul class="contact__agreements">
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я даю согласие на обработку персональных данных в
+                    соответствии с Политикой конфиденциальности
+                  </span>
+                </li>
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я согласен на получение информационных и маркетинговых
+                    рассылок (вы в любой момент можете отказаться от получения
+                    писем)
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <p class="connect__subtitle">
+          Или сразу свяжитесь с нами в любом мессенджере
+        </p>
+
+        <div class="connect__options">
+          <a
+            class="connect__option"
+            href="https://wa.me/message/7YZMK3NHP73YJ1"
+          >
+            <img
+              class="connect__icon"
+              src="./whatsappsilver.png"
+              alt="WhatsApp"
+            />
+            <span>Написать WhatsApp</span>
+          </a>
+          <a class="connect__option" href="https://t.me/IQTGroupBot">
+            <img
+              class="connect__icon"
+              src="./telegramsilver.png"
+              alt="Telegram"
+            />
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Callback modal -->
+    <div class="modal" id="callback-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Обратный звонок"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+        <h2 class="modal__title">
+          Укажите контактные данные и удобное время для звонка
+        </h2>
+        <p class="modal__subtitle">
+          Мы перезвоним вам в течение 1 часа или в другое удобное время
+        </p>
+        <form
+          class="callback-form contact__form"
+          action="./send.php"
+          method="post"
+        >
+          <input type="hidden" name="service_name" value="Обратный звонок" />
+          <input
+            class="callback-input"
+            type="text"
+            name="name"
+            placeholder="Ваше имя"
+            autocomplete="name"
+            required
+          />
+          <input
+            class="callback-input"
+            type="tel"
+            name="phone"
+            placeholder="+7 (999) 555-55-55"
+            autocomplete="tel"
+            required
+          />
+          <div class="callback-time">
+            <p class="callback-time__label">КОГДА ВАМ ПОЗВОНИТЬ?</p>
+            <div class="callback-time__controls">
+              <button type="button" class="callback-time__btn" data-type="now">
+                ПОЗВОНИТЬ СЕЙЧАС
+              </button>
+              <button
+                type="button"
+                class="callback-time__btn is-active"
+                data-type="later"
+              >
+                ПОЗВОНИТЬ ПО ВРЕМЕНИ
+              </button>
+            </div>
+          </div>
+          <input
+            class="callback-input"
+            type="text"
+            name="datetime"
+            style="text-align: left; padding-left: 24px"
+            placeholder="Например: 21 октября в 14:00"
+            data-datetime
+          />
+          <button class="cta-main callback-submit" type="submit">
+            Перезвонить мне
+          </button>
+          <ul class="contact__agreements" data-aos="fade-up">
+            <li class="contact__agreement">
+              <span class="checkbox" aria-hidden="true"></span>
+              <span>
+                Я даю согласие на обработку персональных данных в соответствии с
+                Политикой конфиденциальности
+              </span>
+            </li>
+            <li class="contact__agreement">
+              <span class="checkbox" aria-hidden="true"></span>
+              <span>
+                Я согласен на получение информационных и маркетинговых рассылок
+                (вы в любой момент можете отказаться от получения писем)
+              </span>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <!-- Services modal -->
+    <div class="modal modal2" id="service-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Комплексное сопровождение налоговых проверок"
+      >
+        <button class="modal__close" aria-label="Закрыть">
+          <img src="./close.svg" alt="" />
+        </button>
+
+        <p class="service-modal__lead"></p>
+        <p class="service-modal__description"></p>
+        <section class="contact" aria-label="Бесплатная консультация">
+          <div class="contact__container">
+            <div class="contact__left">
+              <p class="contact__subtitle">
+                Проверка уже назначена или только ожидается?
+              </p>
+              <h2 class="contact__title">
+                Поможем оценить риски и выстроить правильную линию защиты
+              </h2>
+              <p class="contact__subtitle">
+                Выберите удобный формат встречи: дистанционно или встретиться
+                вживую в Москве в удобном для вас месте
+              </p>
+              <div class="contact__nda">
+                <img src="./lock.png" alt="NDA" />
+                <span>Перед консультацией подписываем NDA о неразглашении</span>
+              </div>
+            </div>
+            <div class="contact__right">
+              <form class="contact__form" action="./send.php" method="post">
+                <input type="hidden" name="service_name" value="" />
+                <input type="hidden" name="contact_method" value="phone" />
+                <input
+                  class="contact__input"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input
+                  class="contact__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (999) 555-55-55"
+                  required
+                />
+                <button class="cta-main contact__submit" type="submit">
+                  Получить бесплатную консультацию
+                </button>
+              </form>
+
+              <div class="contact__methods">
+                <div class="contact__methods-title">СПОСОБ СВЯЗИ</div>
+                <div class="contact__chips">
+                  <button
+                    type="button"
+                    class="contact__chip is-active"
+                    data-method="phone"
+                  >
+                    <img src="./call.svg" alt="Звонок" />
+                    <span>ЗВОНОК</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="telegram"
+                  >
+                    <img src="./plane.svg" alt="Telegram" />
+                    <span>TELEGRAM</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="contact__chip"
+                    data-method="whatsapp"
+                  >
+                    <img src="./messenger.svg" alt="WhatsApp" />
+                    <span>WHATSAP</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact__divider" aria-hidden="true"></div>
+
+              <div class="contact__brand">
+                <img class="contact__logo" src="./icon.svg" alt="IQT GROUP" />
+                <span class="contact__rights">Все права защищены</span>
+              </div>
+
+              <ul class="contact__agreements">
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я даю согласие на обработку персональных данных в
+                    соответствии с Политикой конфиденциальности
+                  </span>
+                </li>
+                <li class="contact__agreement">
+                  <span class="checkbox" aria-hidden="true"></span>
+                  <span>
+                    Я согласен на получение информационных и маркетинговых
+                    рассылок (вы в любой момент можете отказаться от получения
+                    писем)
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <p class="connect__subtitle">
+          Или сразу свяжитесь с нами в любом мессенджере
+        </p>
+
+        <div class="connect__options">
+          <a
+            class="connect__option"
+            href="https://wa.me/message/7YZMK3NHP73YJ1"
+          >
+            <img
+              class="connect__icon"
+              src="./whatsappsilver.png"
+              alt="WhatsApp"
+            />
+            <span>Написать WhatsApp</span>
+          </a>
+          <a class="connect__option" href="https://t.me/IQTGroupBot">
+            <img
+              class="connect__icon"
+              src="./telegramsilver.png"
+              alt="Telegram"
+            />
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <header class="header">
+        <div class="header__left" data-aos="fade-up">
+          <a class="logo" href="/" aria-label="IQT Group">
+            <img class="logo__icon" src="./icon.svg" alt="Логотип" />
+            <div class="logo__text">
+              <div class="logo__meta">
+                <span>Налоговый консалтинг</span>
+                <span>Работаем с 2014 года</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="header__actions" data-aos="fade-up">
+          <a
+            class="icon-btn"
+            href="https://t.me/IQTGroupBot"
+            aria-label="Написать в Telegram"
+          >
+            <img src="./plane.svg" alt="Telegram" />
+          </a>
+          <a
+            class="icon-btn"
+            href="https://wa.me/message/7YZMK3NHP73YJ1"
+            aria-label="Написать в мессенджер"
+          >
+            <img src="./messenger.svg" alt="WhatsApp" />
+          </a>
+          <button class="cta-small" data-callback-open>ЗАКАЗАТЬ ЗВОНОК</button>
+          <a class="phone" href="tel:+74997119988">+7 499 711 99 88</a>
+        </div>
+        <button class="burger" aria-label="Открыть меню">
+          <img src="./menu.svg" alt="Меню" />
+        </button>
+      </header>
+
+      <main class="content" data-aos="fade-up">
+        <h1 class="title">
+          Налоговая безопасность и комплексная юридическая защита бизнеса
+        </h1>
+        <p class="subtitle">
+          Специализируемся на комплексной защите бизнеса от налоговых претензий:
+          <br />
+          - досудебном и судебном урегулировании налоговых споров, <br />
+          - выявлении и оценке налоговых рисков,<br />
+          - сопровождении выездных и камеральных налоговых проверок, <br />
+          - налоговом планировании и структурировании.
+        </p>
+        <div class="nalog-cta-small-container">
+          <button class="nalog-cta-small" data-nalog-open>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 17.25L12.75 17.25V10.5469C12.75 10.539 12.7477 10.5315 12.7477 10.5233C12.7477 10.515 12.75 10.5079 12.75 10.5C12.75 10.086 12.414 9.75002 12 9.75002H10.5C10.086 9.75002 9.75 10.086 9.75 10.5C9.75 10.914 10.086 11.25 10.5 11.25H11.25V17.25H10.5C10.086 17.25 9.75 17.586 9.75 18C9.75 18.414 10.086 18.75 10.5 18.75H13.5C13.914 18.75 14.25 18.414 14.25 18C14.25 17.586 13.914 17.25 13.5 17.25ZM12 8.25C12.8284 8.25 13.5 7.57837 13.5 6.75C13.5 5.92163 12.8284 5.25 12 5.25C11.1716 5.25 10.5 5.92163 10.5 6.75C10.5 7.57837 11.1716 8.25 12 8.25ZM12 0C5.37262 0 0 5.37262 0 12C0 18.6278 5.37262 24 12 24C18.6278 24 24 18.6278 24 12C24 5.37262 18.6278 0 12 0ZM12 22.5236C6.21037 22.5236 1.5 17.7896 1.5 12C1.5 6.21033 6.21037 1.49995 12 1.49995C17.7896 1.49995 22.5 6.21035 22.5 12C22.5 17.7896 17.7896 22.5236 12 22.5236Z"
+                fill="#B8DCF4"
+              />
+            </svg>
+            <div>
+              <div>Изменения в налоговом</div>
+              <div style="display: flex">законодательстве 2026</div>
+            </div>
+          </button>
+        </div>
+      </main>
+
+      <div class="cookie" data-aos="fade-up">
+        <div class="cookie__inner">
+          <p>
+            Мы используем куки (cookie), чтобы ваше пребывание на сайте было
+            максимально комфортным
+          </p>
+          <button class="cookie__agree" type="button">Согласен</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas" aria-hidden="true">
+      <div class="offcanvas__overlay" data-close></div>
+      <aside
+        class="offcanvas__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Меню"
+      >
+        <div class="offcanvas__head">
+          <img class="offcanvas__logo" src="./icon.svg" alt="IQT GROUP" />
+          <button class="offcanvas__close" aria-label="Закрыть">
+            <img src="./close.svg" alt="" />
+          </button>
+        </div>
+        <nav class="offcanvas__nav">
+          <a href="#about" data-scroll>О компании</a>
+          <a href="#advantages" data-scroll>Преимущества</a>
+          <a href="#cases" data-scroll>Кейсы</a>
+          <a href="#services" data-scroll>Услуги</a>
+          <a href="#guarantee" data-scroll>Гарантия</a>
+          <a href="#faq" data-scroll>Частые вопросы</a>
+          <a href="#blog" data-scroll>Блог</a>
+          <a href="#contacts" data-scroll>Контакты</a>
+        </nav>
+        <div class="offcanvas__footer">
+          <a class="offcanvas__phone" href="tel:+74997119988"
+            >+7 499 711 99 88</a
+          >
+          <a class="offcanvas__callback" data-callback-open href="#"
+            >ПЕРЕЗВОНИТЬ МНЕ</a
+          >
+          <a
+            class="offcanvas__tg"
+            href="https://t.me/IQTGroupBot"
+            aria-label="Написать в Telegram"
+          >
+            <img src="./pl.png" alt="Telegram" />
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </aside>
+    </div>
+    <script>
+      document
+        .querySelector('.cookie__agree')
+        ?.addEventListener('click', function () {
+          document.querySelector('.cookie')?.classList.add('cookie--hidden')
+        })
+      document.body.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        if (!header) return
+        header.classList.toggle(
+          'header--scrolled',
+          document.body.scrollTop > 10
+        )
+      })
+      // Offcanvas menu logic (burger)
+      ;(function () {
+        const burger = document.querySelector('.burger')
+        const offcanvas = document.querySelector('.offcanvas')
+        if (!burger || !offcanvas) return
+        const overlay = offcanvas.querySelector('.offcanvas__overlay')
+        const closeBtn = offcanvas.querySelector('.offcanvas__close')
+
+        function openMenu() {
+          // show container first, then trigger transitions in next frame
+          offcanvas.classList.add('offcanvas--visible')
+          // Force a reflow to ensure initial styles are applied before opening
+          void offcanvas.offsetWidth
+          requestAnimationFrame(function () {
+            offcanvas.classList.add('offcanvas--open')
+          })
+          document.body.classList.add('menu-open')
+          burger.setAttribute('aria-expanded', 'true')
+        }
+        function closeMenu() {
+          offcanvas.classList.remove('offcanvas--open')
+          document.body.classList.remove('menu-open')
+          burger.setAttribute('aria-expanded', 'false')
+        }
+
+        // After transition ends, hide the container to detach from layout
+        offcanvas.addEventListener('transitionend', function (e) {
+          if (
+            e.propertyName === 'transform' &&
+            !offcanvas.classList.contains('offcanvas--open')
+          ) {
+            offcanvas.classList.remove('offcanvas--visible')
+          }
+        })
+
+        burger.addEventListener('click', openMenu)
+        overlay?.addEventListener('click', closeMenu)
+        closeBtn?.addEventListener('click', closeMenu)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeMenu()
+        })
+
+        // Smooth-scrolling to sections listed in the menu
+        offcanvas.querySelectorAll('[data-scroll]').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href') || ''
+            if (!href.startsWith('#')) return
+            e.preventDefault()
+            const id = href.slice(1)
+            const target = document.getElementById(id)
+            if (target) {
+              closeMenu()
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          })
+        })
+      })()
+
+      // Cases slider logic
+      ;(function () {
+        const viewport = document.querySelector('.cases__viewport')
+        const track = document.querySelector('.cases__track')
+        const slides = track ? Array.from(track.children) : []
+        const prev = document.querySelector('.cases__nav--prev')
+        const next = document.querySelector('.cases__nav--next')
+        const dotsContainer = document.querySelector('.cases__dots')
+        let dots = dotsContainer
+          ? Array.from(dotsContainer.querySelectorAll('.cases__dot'))
+          : []
+        if (!viewport || !track || slides.length === 0) return
+
+        // Ensure dots count matches slides (useful if markup changes)
+        if (dotsContainer && dots.length !== slides.length) {
+          dotsContainer.innerHTML = ''
+          for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('span')
+            dot.className = 'cases__dot'
+            dotsContainer.appendChild(dot)
+          }
+          dots = Array.from(dotsContainer.querySelectorAll('.cases__dot'))
+        }
+
+        let index = 0
+        function getStepPx() {
+          const styles = getComputedStyle(track)
+          const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0
+          const width = viewport.clientWidth
+          return width + gap
+        }
+        function update() {
+          const step = getStepPx()
+          track.style.transform = `translateX(${-index * step}px)`
+          // sync dots
+          dots.forEach((d, i) =>
+            d.classList.toggle('cases__dot--active', i === index)
+          )
+        }
+        prev?.addEventListener('click', function () {
+          index = (index - 1 + slides.length) % slides.length
+          update()
+        })
+        next?.addEventListener('click', function () {
+          index = (index + 1) % slides.length
+          update()
+        })
+        // Dot click navigation
+        dots.forEach((d, i) =>
+          d.addEventListener('click', function () {
+            index = i
+            update()
+          })
+        )
+        // Swipe with Pointer Events (reliable across browsers)
+        let startX = 0
+        let startY = 0
+        let lastX = 0
+        let dragging = false
+        let suppressClick = false
+        const SWIPE_THRESHOLD = 40
+        viewport.addEventListener('pointerdown', function (e) {
+          if (e.target.closest('.cases__btn')) return
+          startX = e.clientX
+          startY = e.clientY
+          lastX = startX
+          dragging = true
+          try {
+            viewport.setPointerCapture(e.pointerId)
+          } catch {}
+        })
+        viewport.addEventListener('pointermove', function (e) {
+          if (!dragging) return
+          const dx = Math.abs(e.clientX - startX)
+          const dy = Math.abs(e.clientY - startY)
+          if (dx > dy && dx > 10) {
+            e.preventDefault()
+            lastX = e.clientX
+            viewport.classList.add('is-dragging')
+          }
+        })
+        function endPointer(e) {
+          if (!dragging) return
+          const dx = (lastX || e.clientX) - startX
+          if (Math.abs(dx) > SWIPE_THRESHOLD) {
+            if (dx < 0) {
+              index = (index + 1) % slides.length
+            } else {
+              index = (index - 1 + slides.length) % slides.length
+            }
+            update()
+            suppressClick = true
+          }
+          dragging = false
+          viewport.classList.remove('is-dragging')
+          try {
+            viewport.releasePointerCapture(e.pointerId)
+          } catch {}
+        }
+        viewport.addEventListener('pointerup', endPointer)
+        viewport.addEventListener('pointercancel', endPointer)
+        // Suppress accidental click after a swipe gesture
+        // viewport.addEventListener(
+        //   'click',
+        //   function (e) {
+        //     if (suppressClick) {
+        //       e.preventDefault()
+        //       suppressClick = false
+        //     }
+        //   },
+        //   true
+        // )
+        window.addEventListener('resize', update)
+        update()
+      })()
+
+      // FAQ toggle logic
+      ;(function () {
+        const items = document.querySelectorAll('.faq__item')
+        if (!items.length) return
+        items.forEach((item) => {
+          const btn = item.querySelector('.faq__question')
+          const answer = item.querySelector('.faq__answer')
+          const icon = item.querySelector('.faq__icon')
+          if (!btn || !answer) return
+          btn.addEventListener('click', function () {
+            const isOpen = item.classList.toggle('faq__item--open')
+            btn.setAttribute('aria-expanded', String(isOpen))
+            if (isOpen) {
+              answer.removeAttribute('hidden')
+              if (icon) icon.setAttribute('src', './minus.svg')
+            } else {
+              answer.setAttribute('hidden', '')
+              if (icon) icon.setAttribute('src', './plus.svg')
+            }
+          })
+        })
+      })()
+
+      // Blog slider logic: scroll by one card (robust, nearest-card detection)
+      ;(function () {
+        const viewport = document.querySelector('.blog__viewport')
+        const track = document.querySelector('.blog__track')
+        const firstCard = track?.querySelector('.blog__card')
+        const prev = document.querySelector('.blog__nav--prev')
+        const next = document.querySelector('.blog__nav--next')
+        if (!viewport || !track || !firstCard) return
+
+        function getStepPx() {
+          const styles = getComputedStyle(track)
+          const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0
+          const cardWidth = firstCard.getBoundingClientRect().width
+          return cardWidth + gap
+        }
+        const cards = Array.from(track.children)
+        function clampIndex(i) {
+          const step = getStepPx()
+          const visible = Math.max(
+            1,
+            Math.floor((viewport.clientWidth + 0.5) / step)
+          )
+          const max = Math.max(0, cards.length - visible)
+          return Math.min(Math.max(0, i), max)
+        }
+        function getCurrentIndex() {
+          const s = viewport.scrollLeft
+          let best = 0
+          let bestDist = Infinity
+          for (let i = 0; i < cards.length; i++) {
+            const left = cards[i].offsetLeft
+            const d = Math.abs(left - s)
+            if (d < bestDist) {
+              bestDist = d
+              best = i
+            }
+          }
+          return best
+        }
+        function scrollToIndex(index) {
+          const step = getStepPx()
+          const target = clampIndex(index) * step
+          viewport.scrollTo({ left: target, behavior: 'smooth' })
+        }
+        prev?.addEventListener('click', function () {
+          const index = clampIndex(getCurrentIndex() - 1)
+          scrollToIndex(index)
+        })
+        next?.addEventListener('click', function () {
+          const index = clampIndex(getCurrentIndex() + 1)
+          scrollToIndex(index)
+        })
+        window.addEventListener('resize', function () {
+          scrollToIndex(getCurrentIndex())
+        })
+      })()
+
+      // Mobile placeholders for contact-final form
+      ;(function () {
+        const form = document.querySelector('.contact-final__form')
+        if (!form) return
+        const nameInput = form.querySelector(
+          '.contact-final__row .contact-final__row-item:nth-child(1) .contact-final__input'
+        )
+        const roleInput = form.querySelector(
+          '.contact-final__row .contact-final__row-item:nth-child(2) .contact-final__input'
+        )
+        const problemTextarea = form.querySelector('.contact-final__textarea')
+        if (!nameInput || !roleInput || !problemTextarea) return
+
+        const desktop = {
+          name: nameInput.getAttribute('placeholder') || '',
+          role: roleInput.getAttribute('placeholder') || '',
+          problem: problemTextarea.getAttribute('placeholder') || '',
+        }
+        const mobile = {
+          name: 'Ваше имя',
+          role: 'Ваша должность',
+          problem: 'Опишите проблему',
+        }
+        const mq = window.matchMedia('(max-width: 767px)')
+        function applyPlaceholders() {
+          const useMobile = mq.matches
+          nameInput.setAttribute(
+            'placeholder',
+            useMobile ? mobile.name : desktop.name
+          )
+          roleInput.setAttribute(
+            'placeholder',
+            useMobile ? mobile.role : desktop.role
+          )
+          problemTextarea.setAttribute(
+            'placeholder',
+            useMobile ? mobile.problem : desktop.problem
+          )
+        }
+        if (mq.addEventListener) {
+          mq.addEventListener('change', applyPlaceholders)
+        } else if (mq.addListener) {
+          mq.addListener(applyPlaceholders)
+        }
+        applyPlaceholders()
+      })()
+    </script>
+    <script>
+      // Contact method selection
+      ;(function () {
+        const forms = document.querySelectorAll('.contact__form')
+        if (!forms.length) return
+
+        forms.forEach(function (form) {
+          const chips = form.parentElement.querySelectorAll('.contact__chip')
+          const methodInput = form.querySelector('input[name="contact_method"]')
+          if (!chips.length || !methodInput) return
+
+          chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+              const method = chip.getAttribute('data-method')
+              if (!method) return
+
+              // Update active state
+              chips.forEach(function (c) {
+                c.classList.remove('is-active')
+              })
+              chip.classList.add('is-active')
+
+              // Update hidden input
+              methodInput.value = method
+            })
+          })
+        })
+      })()
+    </script>
+    <script>
+      // Russian phone number mask for all tel inputs
+      ;(function () {
+        const phoneInputs = document.querySelectorAll('input[type="tel"]')
+        if (!phoneInputs.length) return
+
+        function formatPhoneNumber(value) {
+          // Remove all non-numeric characters
+          const cleaned = value.replace(/\D/g, '')
+
+          // Start with +7
+          let formatted = '+7'
+
+          if (cleaned.length > 1) {
+            // Add opening parenthesis and first 3 digits
+            formatted += ' (' + cleaned.substring(1, 4)
+          }
+
+          if (cleaned.length >= 5) {
+            // Close parenthesis
+            formatted += ') ' + cleaned.substring(4, 7)
+          }
+
+          if (cleaned.length >= 8) {
+            // Add hyphen and next 2 digits
+            formatted += '-' + cleaned.substring(7, 9)
+          }
+
+          if (cleaned.length >= 10) {
+            // Add hyphen and last 2 digits
+            formatted += '-' + cleaned.substring(9, 11)
+          }
+
+          return formatted
+        }
+
+        function setCursorPosition(input, position) {
+          if (input.setSelectionRange) {
+            input.setSelectionRange(position, position)
+          }
+        }
+
+        function handleInput(e) {
+          const input = e.target
+          const oldValue = input.value
+          const oldCursorPos = input.selectionStart
+
+          // Get only numbers
+          let numbers = oldValue.replace(/\D/g, '')
+
+          // If user tries to delete +7, keep it
+          if (numbers.length === 0 || numbers[0] !== '7') {
+            numbers = '7' + numbers.replace(/^7+/, '')
+          }
+
+          // Limit to 11 digits (7 + 10 digits)
+          numbers = numbers.substring(0, 11)
+
+          // Format the number
+          const formatted = formatPhoneNumber(numbers)
+
+          // Update input value
+          input.value = formatted
+
+          // Try to maintain cursor position
+          if (oldValue !== formatted) {
+            // If user is typing (not deleting)
+            if (oldValue.length < formatted.length) {
+              let newPos = oldCursorPos + (formatted.length - oldValue.length)
+              // Skip over formatting characters
+              while (
+                newPos < formatted.length &&
+                (formatted[newPos] === ' ' ||
+                  formatted[newPos] === '(' ||
+                  formatted[newPos] === ')' ||
+                  formatted[newPos] === '-')
+              ) {
+                newPos++
+              }
+              setTimeout(() => setCursorPosition(input, newPos), 0)
+            } else {
+              setTimeout(() => setCursorPosition(input, oldCursorPos), 0)
+            }
+          }
+        }
+
+        function handleFocus(e) {
+          const input = e.target
+          // If empty or just contains formatting, set initial value
+          if (!input.value || input.value.replace(/\D/g, '').length === 0) {
+            input.value = '+7 ('
+            setTimeout(() => setCursorPosition(input, input.value.length), 0)
+          }
+        }
+
+        function handleBlur(e) {
+          const input = e.target
+          // If only +7 ( or similar partial input, clear it
+          const numbers = input.value.replace(/\D/g, '')
+          if (numbers.length <= 1) {
+            input.value = ''
+          }
+        }
+
+        function handleKeyDown(e) {
+          const input = e.target
+          const cursorPos = input.selectionStart
+
+          // Don't allow deletion of +7 prefix
+          if ((e.key === 'Backspace' || e.key === 'Delete') && cursorPos <= 3) {
+            e.preventDefault()
+            setCursorPosition(input, 4)
+          }
+        }
+
+        function handlePaste(e) {
+          e.preventDefault()
+          const paste = (e.clipboardData || window.clipboardData).getData(
+            'text'
+          )
+          const numbers = paste.replace(/\D/g, '')
+
+          // If pasted number starts with 8, replace with 7
+          let cleaned = numbers
+          if (cleaned[0] === '8') {
+            cleaned = '7' + cleaned.substring(1)
+          } else if (cleaned[0] !== '7') {
+            cleaned = '7' + cleaned
+          }
+
+          // Format and set
+          const formatted = formatPhoneNumber(cleaned.substring(0, 11))
+          e.target.value = formatted
+        }
+
+        // Apply mask to all phone inputs
+        phoneInputs.forEach((input) => {
+          input.addEventListener('input', handleInput)
+          input.addEventListener('focus', handleFocus)
+          input.addEventListener('blur', handleBlur)
+          input.addEventListener('keydown', handleKeyDown)
+          input.addEventListener('paste', handlePaste)
+
+          // Set initial value if already filled
+          if (input.value) {
+            const numbers = input.value.replace(/\D/g, '')
+            if (numbers.length > 0) {
+              input.value = formatPhoneNumber(numbers)
+            }
+          }
+        })
+      })()
+    </script>
+    <script>
+      // Form submission handler
+      ;(function () {
+        const forms = document.querySelectorAll('.contact__form')
+        if (!forms.length) return
+
+        forms.forEach(function (form) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault()
+
+            // Get form data
+            const formData = new FormData(form)
+            const submitButton = form.querySelector('button[type="submit"]')
+            const originalButtonText = submitButton
+              ? submitButton.textContent
+              : ''
+
+            // Disable submit button
+            if (submitButton) {
+              submitButton.disabled = true
+              submitButton.textContent = 'Отправка...'
+            }
+
+            // Send form data
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+              },
+            })
+              .then(function (response) {
+                return response.json()
+              })
+              .then(function (data) {
+                if (data.success) {
+                  // Redirect to success page with name
+                  const name = formData.get('name') || ''
+                  const encodedName = encodeURIComponent(name)
+                  window.location.href = './success.html?name=' + encodedName
+                } else {
+                  // Show error message
+                  alert(data.message || 'Произошла ошибка. Попробуйте позже.')
+                  // Re-enable submit button
+                  if (submitButton) {
+                    submitButton.disabled = false
+                    submitButton.textContent = originalButtonText
+                  }
+                }
+              })
+              .catch(function (error) {
+                console.error('Error:', error)
+                alert('Произошла ошибка при отправке формы. Попробуйте позже.')
+                // Re-enable submit button
+                if (submitButton) {
+                  submitButton.disabled = false
+                  submitButton.textContent = originalButtonText
+                }
+              })
+          })
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const elements = Array.from(document.querySelectorAll('[data-aos]'))
+        if (!elements.length) return
+
+        const prefersReduced = window.matchMedia(
+          '(prefers-reduced-motion: reduce)'
+        ).matches
+
+        function applyInitialState(el) {
+          const duration = parseInt(
+            el.getAttribute('data-aos-duration') || '600',
+            10
+          )
+          const delay = parseInt(el.getAttribute('data-aos-delay') || '0', 10)
+          el.style.setProperty('--aos-duration', duration + 'ms')
+          if (delay) el.style.transitionDelay = delay + 'ms'
+        }
+
+        function animateIn(el) {
+          el.classList.add('aos-in')
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateIn(entry.target)
+                observer.unobserve(entry.target)
+              }
+            })
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -10% 0px',
+          }
+        )
+
+        elements.forEach((el) => {
+          applyInitialState(el)
+          if (prefersReduced) {
+            // Respect reduced motion: show immediately
+            animateIn(el)
+          } else {
+            observer.observe(el)
+          }
+        })
+
+        // In case late-loading images shift layout, ensure IO runs after load
+        window.addEventListener('load', function () {
+          elements.forEach((el) => {
+            // No explicit refresh needed; IntersectionObserver accounts for it
+          })
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        var preloader = document.querySelector('.preloader')
+        if (!preloader) return
+
+        function hidePreloader() {
+          if (!preloader || preloader.classList.contains('preloader--hidden'))
+            return
+          preloader.classList.remove('preloader--visible')
+          var onEnd = function (e) {
+            if (e.propertyName !== 'opacity') return
+            preloader.classList.add('preloader--hidden')
+            preloader.removeEventListener('transitionend', onEnd)
+            document.body.classList.remove('is-preloading')
+          }
+          preloader.addEventListener('transitionend', onEnd)
+        }
+
+        // Fade out when the page finishes loading
+        window.addEventListener('load', hidePreloader)
+        // Fallback in case load is delayed
+        setTimeout(hidePreloader, 3500)
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const triggers = Array.from(
+          document.querySelectorAll('[data-callback-open]')
+        )
+        const modal = document.getElementById('callback-modal')
+        if (!triggers.length || !modal) return
+        const overlay = modal.querySelector('.modal__overlay')
+        const closeBtn = modal.querySelector('.modal__close')
+        const btnNow = modal.querySelector('[data-type="now"]')
+        const btnLater = modal.querySelector('[data-type="later"]')
+        const datetimeInput = modal.querySelector('[data-datetime]')
+
+        function openModal() {
+          modal.classList.add('modal--visible')
+          // reflow then animate
+          void modal.offsetWidth
+          requestAnimationFrame(function () {
+            modal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+        function closeModal() {
+          modal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+        modal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !modal.classList.contains('modal--open')
+          ) {
+            modal.classList.remove('modal--visible')
+          }
+        })
+
+        function setMode(mode) {
+          const isLater = mode === 'later'
+          if (datetimeInput) {
+            datetimeInput.style.display = isLater ? '' : 'none'
+            datetimeInput.disabled = !isLater
+          }
+          btnNow?.classList.toggle('is-active', !isLater)
+          btnLater?.classList.toggle('is-active', isLater)
+        }
+        setMode('later')
+
+        triggers.forEach(function (el) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault()
+            openModal()
+          })
+        })
+        overlay?.addEventListener('click', closeModal)
+        closeBtn?.addEventListener('click', closeModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeModal()
+        })
+        btnNow?.addEventListener('click', function () {
+          setMode('now')
+        })
+        btnLater?.addEventListener('click', function () {
+          setMode('later')
+        })
+      })()
+    </script>
+    <script src="./data.js"></script>
+    <script>
+      ;(function () {
+        const serviceModal = document.getElementById('service-modal')
+        if (!serviceModal) return
+
+        const modalLead = serviceModal.querySelector('.service-modal__lead')
+        const modalDescription = serviceModal.querySelector(
+          '.service-modal__description'
+        )
+        const modalDialog = serviceModal.querySelector('.modal__dialog')
+
+        const sourceData = Array.isArray(window.serviceModalData)
+          ? window.serviceModalData
+          : Array.isArray(window.data)
+          ? window.data
+          : []
+
+        const serviceMap = sourceData.reduce((acc, item) => {
+          if (item?.id) acc[item.id] = item
+          return acc
+        }, {})
+
+        const openers = Array.from(
+          document.querySelectorAll(
+            '#services .services__list .services__item a[data-service-id]'
+          )
+        ).filter((link) => serviceMap[link.dataset.serviceId || ''])
+
+        if (!openers.length) return
+
+        const overlay = serviceModal.querySelector('.modal__overlay')
+        const closeBtn = serviceModal.querySelector('.modal__close')
+
+        function updateServiceContent(service) {
+          if (!service) return false
+          if (modalLead) modalLead.textContent = service.title || ''
+          if (modalDescription) {
+            modalDescription.textContent = service.description || ''
+          }
+          if (modalDialog) {
+            modalDialog.setAttribute(
+              'aria-label',
+              service.title || 'Описание услуги'
+            )
+          }
+          return true
+        }
+
+        function openServiceModal(serviceId) {
+          if (!updateServiceContent(serviceMap[serviceId])) return
+          serviceModal.classList.add('modal--visible')
+          void serviceModal.offsetWidth
+          requestAnimationFrame(function () {
+            serviceModal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+        function closeServiceModal() {
+          serviceModal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+        serviceModal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !serviceModal.classList.contains('modal--open')
+          ) {
+            serviceModal.classList.remove('modal--visible')
+          }
+        })
+
+        openers.forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            e.preventDefault()
+            openServiceModal(a.dataset.serviceId || '')
+          })
+        })
+        overlay?.addEventListener('click', closeServiceModal)
+        closeBtn?.addEventListener('click', closeServiceModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeServiceModal()
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const casesModal = document.getElementById('cases-modal')
+        if (!casesModal) return
+        const openers = Array.from(document.querySelectorAll('.cases__btn'))
+        if (!openers.length) return
+        const overlay = casesModal.querySelector('.modal__overlay')
+        const closeBtn = casesModal.querySelector('.modal__close')
+        function openCasesModal(index) {
+          const caseData = window.casesData[index]
+          if (!caseData) return
+          casesModal.querySelector('.service-modal__lead').textContent =
+            caseData.title
+          casesModal.querySelector('#case-situation').textContent =
+            caseData.situation
+          if (caseData.situationDescription) {
+            casesModal.querySelector(
+              '#case-situation-description'
+            ).style.display = 'flex'
+            casesModal.querySelector(
+              '#case-situation-description-text'
+            ).innerHTML = caseData.situationDescription
+          } else {
+            casesModal.querySelector(
+              '#case-situation-description'
+            ).style.display = 'none'
+          }
+          if (caseData.task) {
+            casesModal.querySelector('#case-task').style.display = 'flex'
+            casesModal.querySelector('#case-task-text').innerHTML =
+              caseData.task
+          } else {
+            casesModal.querySelector('#case-task').style.display = 'none'
+          }
+          casesModal.querySelector('#case-steps').innerHTML = caseData.steps
+          casesModal.querySelector('#case-result').innerHTML = caseData.result
+          casesModal.querySelector('#case-output-text').innerHTML =
+            caseData.output
+          casesModal.classList.add('modal--visible')
+          void casesModal.offsetWidth
+          requestAnimationFrame(function () {
+            casesModal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+        function closeCasesModal() {
+          casesModal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+        casesModal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !casesModal.classList.contains('modal--open')
+          ) {
+            casesModal.classList.remove('modal--visible')
+          }
+        })
+
+        openers.forEach(function (a, index) {
+          a.addEventListener('click', function (e) {
+            openCasesModal(index)
+          })
+        })
+        overlay?.addEventListener('click', closeCasesModal)
+        closeBtn?.addEventListener('click', closeCasesModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeCasesModal()
+        })
+      })()
+    </script>
+    <script>
+      ;(function () {
+        const nalogModal = document.getElementById('nalog-modal')
+        if (!nalogModal) return
+        const openers = Array.from(
+          document.querySelectorAll('[data-nalog-open]')
+        )
+        if (!openers.length) return
+        const overlay = nalogModal.querySelector('.modal__overlay')
+        const closeBtn = nalogModal.querySelector('.modal__close')
+
+        function openNalogModal() {
+          nalogModal.classList.add('modal--visible')
+          void nalogModal.offsetWidth
+          requestAnimationFrame(function () {
+            nalogModal.classList.add('modal--open')
+          })
+          document.body.classList.add('menu-open')
+        }
+
+        function closeNalogModal() {
+          nalogModal.classList.remove('modal--open')
+          document.body.classList.remove('menu-open')
+        }
+
+        nalogModal.addEventListener('transitionend', function (e) {
+          if (
+            (e.propertyName === 'opacity' || e.propertyName === 'transform') &&
+            !nalogModal.classList.contains('modal--open')
+          ) {
+            nalogModal.classList.remove('modal--visible')
+          }
+        })
+
+        openers.forEach(function (el) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault()
+            openNalogModal()
+          })
+        })
+
+        overlay?.addEventListener('click', closeNalogModal)
+        closeBtn?.addEventListener('click', closeNalogModal)
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeNalogModal()
+        })
+      })()
+    </script>
+  </body>
+</html>
